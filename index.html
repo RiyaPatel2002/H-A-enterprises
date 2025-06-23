@@ -24,210 +24,294 @@
     </style>
 </head>
 
-<body>
-    <nav id="navbar"
-        class="hidden lg:block fixed top-0 left-0 w-full bg-white shadow z-50 transition-transform duration-300 transform -translate-y-full">
-        <div class="max-w-7xl mx-auto flex items-center justify-between h-16">
-            <!-- <a href="#" class="text-4xl font-bold">
-                <span class="text-cyan-500">Riya</span>Patel
-            </a> -->
-            <img src="image/H_A-removebg-preview.png" alt="Logo" class=" w-16 sm:w-20 md:w-20" />
-            <div class="hidden lg:flex space-x-6 font-medium">
-                <a href="#home" class="hover:text-cyan-500">Home</a>
-                <a href="#about" class="hover:text-cyan-500">About</a>
-                <a href="#qualification" class="hover:text-cyan-500">Services</a>
-                <!-- <a href="#skill" class="hover:text-cyan-500">Skill</a> -->
-                <a href="#contact" class="hover:text-cyan-500">Contact</a>
-                <a href="#"
-                    class="border border-cyan-500 text-cyan-500 px-4 py-1 rounded hover:bg-cyan-500 hover:text-white transition">Contact
-                    Me</a>
-            </div>
-        </div>
-    </nav>
+<body class="bg-black text-white">
+    <!-- Swiper Section with Navbar on top -->
+    <div class=" w-full">
+        <!-- Navbar over image -->
+        <nav class="absolute top-0 left-0 w-full bg-black/30  z-50">
+            <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-4">
+                <!-- Logo -->
+                <img src="image/H_A-removebg-preview.png" alt="Logo" class="w-16 sm:w-20 md:w-20" />
 
-    <!-- section 1 -->
-    <div class="relativ" id="home">
+                <!-- Links -->
+                <div class="hidden lg:flex space-x-6 font-medium text-white text-center">
+                    <a href="#home" class="hover:text-cyan-500 transition">Home</a>
+                    <a href="#about" class="hover:text-cyan-500 transition">About</a>
+                    <a href="#qualification" class="hover:text-cyan-500 transition">Services</a>
+                    <a href="#contact" class="hover:text-cyan-500 transition">Contact</a>
+                </div>
+                <div>
+                    <a href="#"
+                        class="border border-cyan-500 text-cyan-500 px-4 py-1 rounded hover:bg-cyan-500 hover:text-white transition">
+                        Contact Me
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+
         <!-- Swiper -->
-        <!-- Swiper Container -->
-        <!-- Swiper Container -->
-        <div class="swiper mySwiper relative w-full">
+        <div class="swiper mySwiper w-full">
             <div class="swiper-wrapper">
 
                 <!-- Slide 1 -->
                 <div class="swiper-slide relative">
-                    <!-- Logo -->
-                    <img src="image/H_A-removebg-preview.png" alt="Logo"
-                        class="absolute w-16 sm:w-20 md:w-32 top-4 left-4 md:left-12 z-10" />
-
-                    <!-- Background Image -->
-                    <div class="relative">
-                        <img src="image/img11.jpg" alt="Image 1"
-                            class="w-full h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] object-cover" />
-                        <div class="absolute inset-0 bg-blue-100 opacity-50"></div>
-                    </div>
-
-                    <!-- Text -->
-                    <div class="absolute inset-0 flex items-center justify-center px-4 text-center">
-                        <p class="text-gray-800 font-bold text-xl sm:text-3xl md:text-5xl lg:text-7xl leading-tight">
-                            Solutions that are
-                            <span class="text-white font-bold">bold <br> and up</span>
-                            with the times
+                    <img src="image/h1.webp" alt="Background" class="w-full h-[100vh] object-cover" />
+                    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center mt-10 z-30">
+                        <p
+                            class="text-white font-bold text-xl sm:text-3xl md:text-5xl lg:text-6xl max-w-3xl leading-tight">
+                            Solutions that are <span class="text-gray-400">bold and up</span> with the times
                         </p>
+                        <p class="mt-4 text-sm sm:text-base md:text-lg text-gray-200 mx-8 lg:mx-0 lg:max-w-2xl">
+                            We deliver modern, future-ready solutions tailored for today's fast-paced industrial and
+                            tender environments.
+                        </p>
+                        <button class="w-[120px] h-[40px] mt-10 rounded font-bold bg-white text-black/80 
+         shadow-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            Explore
+                        </button>
+
                     </div>
                 </div>
 
+                <!-- Slide 2 and 3... same as before -->
                 <!-- Slide 2 -->
                 <div class="swiper-slide relative">
-                    <img src="image/H_A-removebg-preview.png" alt="Logo"
-                        class="absolute w-16 sm:w-20 md:w-32 top-4 left-4 md:left-12 z-10" />
-
-                    <div class="relative">
-                        <img src="image/img12.jpg" alt="Image 2"
-                            class="w-full h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] object-cover" />
-                        <div class="absolute inset-0 bg-blue-100 opacity-50"></div>
-                    </div>
-
-                    <div class="absolute inset-0 flex items-center justify-center px-4 text-center">
-                        <p class="text-gray-800 font-bold text-xl sm:text-3xl md:text-5xl lg:text-7xl leading-tight">
-                            Save time & effort with<br>
-                            the <span class="text-white font-bold text-gray-700">H & A Enterprises</span> team
+                    <img src="image/h2.webp" alt="Background" class="w-full h-[100vh] object-cover" />
+                    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center mt-10 z-30">
+                        <p
+                            class="text-white font-bold text-xl sm:text-3xl md:text-5xl lg:text-6xl max-w-3xl leading-tight">
+                            Save time & effort with<br />
+                            the <span class="text-gray-400 font-bold">H & A Enterprises</span> team
                         </p>
+                        <p class="mt-4 text-sm sm:text-base md:text-lg text-gray-200 mx-8 lg:mx-0 lg:max-w-2xl">
+                            Streamline your tender and procurement process with our experienced support and efficient
+                            services.
+                        </p>
+                        <button
+                            class="w-[120px] font-bold mt-10 h-[40px] rounded bg-white text-black/80 hover:bg-gray-100 transition">Explore</button>
                     </div>
                 </div>
 
                 <!-- Slide 3 -->
                 <div class="swiper-slide relative">
-                    <img src="image/H_A-removebg-preview.png" alt="Logo"
-                        class="absolute w-16 sm:w-20 md:w-32 top-4 left-4 md:left-12 z-10" />
-
-                    <div class="relative">
-                        <img src="image/img13.jpg" alt="Image 3"
-                            class="w-full h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] object-cover" />
-                        <div class="absolute inset-0 bg-blue-100 opacity-50"></div>
-                    </div>
-
-                    <div class="absolute inset-0 flex items-center justify-center px-4 text-center">
-                        <p class="text-gray-800 font-bold text-xl sm:text-3xl md:text-5xl lg:text-7xl leading-tight">
-                            Grow your business<br>
-                            with <span class="text-white font-bold">H & A Enterprises</span>
+                    <img src="image/h3.webp" alt="Background" class="w-full h-[100vh] object-cover" />
+                    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 mt-10 text-center z-30">
+                        <p
+                            class="text-white font-bold text-xl sm:text-3xl md:text-5xl lg:text-6xl max-w-3xl leading-tight">
+                            Grow your business<br />
+                            with <span class="text-gray-400 font-bold">H & A Enterprises</span>
                         </p>
+                        <p class="mt-4 text-sm sm:text-base md:text-lg text-gray-200 mx-8 lg:mx-0 lg:max-w-2xl">
+                            Partner with us to unlock growth opportunities through tenders, compliance support, and
+                            custom solutions.
+                        </p>
+                        <button
+                            class="w-[120px] font-bold mt-10 h-[40px] rounded bg-white text-black/80 hover:bg-gray-100 transition">Explore</button>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Navigation -->
+            <!-- Swiper Controls -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-
-            <!-- Pagination -->
             <div class="swiper-pagination mt-4"></div>
         </div>
-
-
     </div>
+
+
+    <!-- background: #0A1E2B; -->
+
+    <!-- About us -->
+    <div class="py-8 lg:py-24 bg-black">
+        <div class="text-center px-4">
+            <h2 class="text-xl lg:text-4xl font-bold text-gray-200">About Us</h2>
+            <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
+
+            <p class="mt-6 text-[#DFDFDF] max-w-xl lg:mx-auto mx-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+
 
     <!-- section 2 -->
     <!-- <div class="max-w-7xl mx-auto w-full px-4"> -->
-    <div class="py-8 lg:py-24 bg-white">
-        <div class="text-center">
-            <h2 class="text-xl lg:text-3xl font-bold text-gray-800">My Services</h2>
+    <div class="py-8 lg:py-24 bg-black">
+        <div class="text-center px-4">
+            <h2 class="text-xl lg:text-4xl font-bold text-gray-200">Our Services</h2>
             <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
-        </div>
 
-        <div class="px-5 lg:px-0 grid grid-cols-1 md:grid-cols-3 gap-10 mt-8 max-w-7xl lg:py-5 mx-auto w-full">
+            <p class="mt-6 text-[#DFDFDF] max-w-xl lg:mx-auto mx-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+        </div>
+        <div class="px-5 lg:px-0 grid grid-cols-1 md:grid-cols-3 gap-7 mt-8 max-w-7xl lg:py-5 mx-auto w-full">
             <!-- SERVICE CARD TEMPLATE -->
             <div
-                class="group px-6 py-8 border border-gray-300 bg-white rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col hover:bg-[#167893]">
+                class="group px-4 py-4 border border-[#434343] bg-[#131316] rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893]">
 
-                <div class="flex justify-center items-center h-28 mb-4">
-                    <div
-                        class="border-2 border-[#167893] rounded-full p-4 transition-all duration-500 group-hover:border-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                            class="text-[#167893] transition-all duration-500 group-hover:text-white">
-                            <path fill="none" stroke="currentColor" stroke-width="2"
-                                d="M8 6h8V1H8zm8-3h5v20H3V3h5m0 11l3 3l6-6" />
-                        </svg>
-                    </div>
+                <!-- Icon/Image Wrapper -->
+                <div
+                    class="flex justify-center items-center mb-4 rounded-lg transition-colors group-hover:bg-[#1e1e1e]">
+                    <img src="image/s1.png" alt="Service Icon" class="object-contain" />
                 </div>
 
+                <!-- Heading -->
                 <h3
-                    class="text-xl font-bold text-center text-[#167893] mb-4 transition-all duration-500 group-hover:text-white">
+                    class="text-xl font-bold  text-white mb-4 transition-all duration-500 ease-in-out group-hover:text-white">
                     Secretarial & Compliance
                 </h3>
 
+                <!-- Description -->
                 <p
-                    class="text-gray-700 leading-relaxed flex-grow text-center transition-all duration-500 group-hover:text-white">
-                    We offer comprehensive secretarial services including company registrations for Private Limited and
-                    Section 8 companies, GST, MSME, E-Anudhan, PF & ESIC registrations, annual company and GST
-                    compliance, as well as auditor appointment and audit assistance.
+                    class="text-gray-200 leading-relaxed transition-all duration-500 ease-in-out group-hover:text-white mb-4">
+                    We offer company registrations for Private Limited and Section 8 companies, along with GST, MSME,
+                    E-Anudhan, PF & ESIC registrations.
                 </p>
+
+                <p class="text-gray-200 leading-relaxed transition-all duration-500 ease-in-out group-hover:text-white">
+                    Our services also include annual GST and company compliance, auditor appointments, and audit
+                    assistance.
+                </p>
+
             </div>
 
             <!-- COPY THIS CARD AND CHANGE CONTENT FOR OTHER SERVICES -->
+            <!-- Legal Advisory -->
+            <div
+                class="group h-[400px] px-4 py-4 border border-[#434343] bg-[#131316] rounded-xl shadow-md hover:shadow-2xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893]">
+
+                <!-- Image/Icon Section -->
+                <div
+                    class="flex justify-center items-center mb-4 rounded-lg transition-colors group-hover:bg-[#1e1e1e]">
+                    <img src="image/s1.png" alt="Legal Advisory Icon" class="object-contain" />
+                </div>
+
+                <!-- Title -->
+                <h3 class="text-xl font-bold text-white mb-4 transition-all duration-500 group-hover:text-white">
+                    Legal Advisory
+                </h3>
+
+                <!-- Description -->
+                <p class="text-gray-200 leading-relaxed transition-all duration-500 group-hover:text-white mb-3">
+                    We handle family law, SARFAESI cases, succession matters, cybercrime, and Mudda Maal cases.
+                </p>
+                <p class="text-gray-200 leading-relaxed transition-all duration-500 group-hover:text-white">
+                    Our experts also assist with Section 138 NI Act
+
+            </div>
             <!-- GEM Consultant -->
             <div
-                class="group px-6 py-8 border border-gray-300 bg-white rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col hover:bg-[#167893]">
-                <div class="flex justify-center items-center h-28 mb-4">
-                    <div
-                        class="border-2 border-[#167893] rounded-full p-4 transition-all duration-500 group-hover:border-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"
-                            class="text-[#167893] transition-all duration-500 group-hover:text-white">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.5">
-                                <path d="m8 12.5l4.5-5l-2-2h-5l-2 2z" />
-                                <path d="M14.5 12L8 15.5L1.5 12V4L8 .5L14.5 4z" />
-                            </g>
-                        </svg>
-                    </div>
+                class="group px-4 py-4 border border-[#434343] bg-[#131316] rounded-xl shadow-md cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893] hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out">
+
+                <!-- Image/Icon Section -->
+                <div
+                    class="flex justify-center items-center mb-4 rounded-lg transition-colors group-hover:bg-[#1e1e1e]">
+                    <img src="image/s2.png" alt="GEM Consultant Icon" class="object-contain" />
                 </div>
-                <h3
-                    class="text-xl font-bold text-center text-[#167893] mb-4 transition-all duration-500 group-hover:text-white">
+
+                <!-- Title -->
+                <h3 class="text-xl font-bold text-white mb-4 transition-all duration-500 group-hover:text-white">
                     GEM Consultant
                 </h3>
-                <p
-                    class="text-gray-700 leading-relaxed flex-grow text-center transition-all duration-500 group-hover:text-white">
-                    We provide complete support for Government e-Marketplace (GeM Portal), including tender information,
-                    bidding/BOQ, and L1 comparison. We assist with product/service catalogue uploads and OEM
-                    authorization for Q2 products.
+
+                <!-- Paragraphs -->
+                <p class="text-gray-200 leading-relaxed transition-all duration-500 group-hover:text-white mb-3">
+                    We provide complete support for the Government e-Marketplace (GeM Portal), including tender details,
+                    BOQ, and L1 comparison.
+                </p>
+                <p class="text-gray-200 leading-relaxed transition-all duration-500 group-hover:text-white">
+                    Assistance includes uploading product/service catalogs and OEM authorization for Q2 products.
                 </p>
             </div>
 
-            <!-- Legal Advisory -->
+            <!-- Social Media Marketing-->
             <div
-                class="group px-6 py-8 border border-gray-300 bg-white rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-500 cursor-pointer flex flex-col hover:bg-[#167893]">
-                <div class="flex justify-center items-center h-28 mb-4">
-                    <div
-                        class="border-2 border-[#167893] rounded-full p-4 transition-all duration-500 group-hover:border-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                            class="text-[#167893] transition-all duration-500 group-hover:text-white">
-                            <path fill="currentColor"
-                                d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z" />
-                        </svg>
-                    </div>
+                class="group px-4 py-4 border border-[#434343] bg-[#131316] rounded-xl shadow-md hover:shadow-2xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893]">
+
+                <!-- Image/Icon Section -->
+                <div
+                    class="flex justify-center items-center mb-4 rounded-lg transition-colors group-hover:bg-[#1e1e1e]">
+                    <img src="image/s1.png" alt="Legal Advisory Icon" class="object-contain" />
                 </div>
-                <h3
-                    class="text-xl font-bold text-center text-[#167893] mb-4 transition-all duration-500 group-hover:text-white">
-                    Legal Advisory
+
+                <!-- Title -->
+                <h3 class="text-xl font-bold text-white mb-4 transition-all duration-500 group-hover:text-white">
+                    Social Media Marketing
                 </h3>
-                <p
-                    class="text-gray-700 leading-relaxed flex-grow text-center transition-all duration-500 group-hover:text-white">
-                    We handle family matters, SARFAESI matters, succession matters, cyber cases, Mudda Maal, and cases
-                    under Section 138 of the NI Act with expert legal support.
+
+                <!-- Description -->
+                <p class="text-gray-200 leading-relaxed transition-all duration-500 group-hover:text-white mb-3">
+                    Driving brand awareness and customer engagement through carefully planned and executed social media
+                    strategies.
                 </p>
+            </div>
+
+            <!-- Web Development-->
+            <div
+                class="group lg:-mt-18 px-4 py-4 border border-[#434343] bg-[#131316] rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893]">
+
+                <!-- Icon/Image Wrapper -->
+                <div
+                    class="flex justify-center items-center mb-4 rounded-lg transition-colors group-hover:bg-[#1e1e1e]">
+                    <img src="image/s1.png" alt="Service Icon" class="object-contain" />
+                </div>
+
+                <!-- Heading -->
+                <h3
+                    class="text-xl font-bold  text-white mb-4 transition-all duration-500 ease-in-out group-hover:text-white">
+                    Web Development
+                </h3>
+
+                <!-- Description -->
+                <p
+                    class="text-gray-200 leading-relaxed transition-all duration-500 ease-in-out group-hover:text-white mb-4">
+                    I build and maintain websites by combining front-end and back-end technologies, design principles,
+                    and usability best practices.
+                </p>
+
+                <p class="text-gray-200 leading-relaxed transition-all duration-500 ease-in-out group-hover:text-white">
+                    Each site is optimized for performance, accessibility, and scalability across all devices.
+                </p>
+
+            </div>
+
+            <!-- Social Media Marketing-->
+            <div
+                class="group px-4 py-4 border border-[#434343] bg-[#131316] rounded-xl shadow-md hover:shadow-2xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893]">
+
+                <!-- Image/Icon Section -->
+                <div
+                    class="flex justify-center items-center mb-4 rounded-lg transition-colors group-hover:bg-[#1e1e1e]">
+                    <img src="image/s1.png" alt="Legal Advisory Icon" class="object-contain" />
+                </div>
+
+                <!-- Title -->
+                <h3 class="text-xl font-bold text-white mb-4 transition-all duration-500 group-hover:text-white">
+                    Social Media Marketing
+                </h3>
+
+                <!-- Description -->
+                <p class="text-gray-200 leading-relaxed transition-all duration-500 group-hover:text-white mb-3">
+                    Driving brand awareness and customer engagement through carefully planned and executed social media
+                    strategies.
+                </p>
+
             </div>
         </div>
     </div>
 
-
     <!-- section 3 (About me) -->
-    <div class="flex flex-col md:flex-row w-full lg:h-[850px] h-full">
-        <!-- Image Section -->
+    <!-- <div class="flex flex-col md:flex-row w-full lg:h-[850px] h-full">
+       
         <div class="lg:block hidden w-full md:w-1/2">
             <img src="\image\img1.jpg" alt="About me" class="h-[800px] bg-blue-100 opacity-75 object-cover">
         </div>
 
-        <!-- Text Section -->
+   
         <div class="w-full md:w-1/2 flex p-6 bg-[#DEEFF4] lg:overflow-auto lg:h-[800px]">
             <div class="flex flex-col">
                 <div class="flex flex-col gap-8 lg:mx-18 my-10">
@@ -235,15 +319,17 @@
                         <h1 class="text-4xl font-bold text-[#167893] text-center">About Us</h1>
                     </div>
                     <div>
-                        <p class="text-md text-gray-800"> Hello! Welcome to Bizhelp, one of India's largest and most
+                        <p class="text-mdtext-gray-200"> Hello! Welcome to Bizhelp, one of India's largest and most
                             esteemed tender and bid management
                             companiy. We offer a wide range of services related to bids and tenders, with over 5000
                             satisfied
-                            clients across more than 50 sectors. Our vision is to simplify the tendering process, making
+                            clients across more than 50 sectors. Our vision is to simplify the tendering process,
+                            making
                             it
                             accessible to everyone. As your trusted GeM Consultant, we provide expert guidance from
                             registration
-                            to vendor assessment, ensuring streamlined and high-quality procurement. Trust Bizhelp to
+                            to vendor assessment, ensuring streamlined and high-quality procurement. Trust Bizhelp
+                            to
                             make
                             your
                             tendering journey smooth and successful.</p>
@@ -254,7 +340,7 @@
                         <h1 class="text-2xl font-bold text-[#167893]">Our Mission</h1>
                     </div>
                     <div>
-                        <p class="text-md text-gray-800"> Our mission is to empower businesses with reliable tender
+                        <p class="text-mdtext-gray-200"> Our mission is to empower businesses with reliable tender
                             solutions and innovative web development services that foster growth and success. By
                             simplifying the tendering process and delivering impactful digital experiences, we help
                             clients confidently secure opportunities and thrive in both competitive markets and the
@@ -263,19 +349,21 @@
                         </p>
                     </div>
                 </div>
-                <!-- Our Goals  -->
+          
+                
                 <div class="flex flex-col gap-5 lg:mx-18">
                     <div>
                         <h1 class="text-2xl font-bold text-[#167893] mt-10">Our Goals </h1>
                     </div>
                     <div>
-                        <p class="text-md text-gray-800"> We help businesses grow through expert tender support and
+                        <p class="text-mdtext-gray-200"> We help businesses grow through expert tender support and
                             modern web development. From simplifying tender processes to building responsive,
-                            user-friendly websites, we deliver results that boost confidence, visibility, and long-term
+                            user-friendly websites, we deliver results that boost confidence, visibility, and
+                            long-term
                             success.
                         </p>
                         <ul class="list-disc pl-5 mt-10">
-                            <div class="flex flex-col lg:flex-row lg:gap-10 space-x-5 text-md text-gray-800">
+                            <div class="flex flex-col lg:flex-row lg:gap-10 space-x-5 text-mdtext-gray-200">
                                 <div class="space-y-3">
                                     <li>Simplify and support the tendering process</li>
                                     <li>Create impactful, user-focused websites</li>
@@ -290,17 +378,20 @@
                     </div>
                 </div>
 
-                <!-- our vision -->
+                
                 <div class="flex flex-col gap-5 lg:mx-18">
                     <div>
                         <h1 class="text-2xl font-bold text-[#167893] mt-10">Our Vision</h1>
                     </div>
                     <div>
-                        <p class="text-md text-gray-800 mb-10 lg:mb-20"> Our vision is to simplify tendering and empower
+                        <p class="text-mdtext-gray-200 mb-10 lg:mb-20"> Our vision is to simplify tendering and
+                            empower
                             businesses
-                            through innovative web development. We aim to help businesses secure valuable opportunities,
+                            through innovative web development. We aim to help businesses secure valuable
+                            opportunities,
                             build strong digital identities, and drive growth. By combining expertise in tender
-                            management with user-friendly digital solutions, we strive to enable businesses to thrive in
+                            management with user-friendly digital solutions, we strive to enable businesses to
+                            thrive in
                             both competitive markets and the digital world.
 
                         </p>
@@ -308,25 +399,160 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
+    <!-- Why Choose Us -->
+    <div class="py-8 pb-10 lg:pb-24 bg-black">
+        <div class="text-center px-4">
+            <h2 class="text-xl lg:text-4xl font-bold text-gray-200">Why Choose H&A Enterprises</h2>
+            <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
+
+            <p class="mt-6 text-[#DFDFDF] max-w-2xl mx-auto">
+                At H&A Enterprises, we deliver excellence backed by experience, innovation, and integrity—earning the
+                trust of clients across every project.
+            </p>
+        </div>
+        <div class="max-w-7xl lg:mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-10 items-center mx-5">
+
+            <!-- Image (optional) -->
+            <div class="flex justify-center">
+                <img src="/image/why.jpg" alt="Why Choose Us" class="w-full mt-10 lg:mt-16 rounded-2xl shadow-xl" />
+            </div>
+
+            <!-- Text Content -->
+            <div class="text-gray-200 ">
+                <ul class="mt-10 lg:mt-16 space-y-4 text-[#DFDFDF] text-sm lg:text-base">
+                    <li class="">
+                        <span class="font-bold text-[#167893]">1) Proven Expertise:</span><br />
+                        With a strong track record across multiple sectors, we bring deep knowledge and technical skills
+                        to every engagement.
+                    </li>
+                    <li>
+                        <span class="font-bold text-[#167893]">2) Client-Centric Approach:</span><br />
+                        We prioritize our clients’ needs by offering customized solutions that align perfectly with
+                        their goals.
+                    </li>
+                    <li>
+                        <span class="font-bold text-[#167893]">3) Reliable & Transparent:</span><br />
+                        From project initiation to delivery, we maintain full transparency and uphold timelines with
+                        integrity.
+                    </li>
+                    <li>
+                        <span class="font-bold text-[#167893]">4) Skilled Professionals:</span><br />
+                        Our team consists of dedicated experts who are passionate about what they do.
+                    </li>
+                    <li>
+                        <span class="font-bold text-[#167893]">5) Innovation & Technology:</span><br />
+                        We leverage the latest tools and methodologies to deliver efficient and modern results.
+                    </li>
+                </ul>
+
+                <p class="mt-6 font-semibold text-[#167893] text-sm lg:text-base">
+                    Partner with H&A Enterprises—where quality meets commitment.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Why Choose Us -->
+
+
+    <!-- Testimonials -->
+    <div class="py-8 bg-black">
+        <div class="text-center px-4">
+            <h2 class="text-xl lg:text-4xl font-bold text-gray-200">Testimonials</h2>
+            <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
+
+            <p class="mt-6 text-[#DFDFDF] max-w-xl lg:mx-auto mx-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+        </div>
+        <div class="px-5 lg:px-0 grid grid-cols-1 md:grid-cols-3 gap-7 mt-8 max-w-7xl lg:py-5 mx-auto w-full">
+            <div
+                class="group px-5 py-5 border border-[#434343] bg-[#131316] rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893]">
+                <!-- Description -->
+                <p
+                    class="text-gray-200 leading-relaxed transition-all duration-500 ease-in-out group-hover:text-white mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. 
+                </p>
+                <hr class="mt-5 border-t border-gray-200" />
+
+                <div class="flex mt-7 gap-6">
+                    <div>
+                        <img src="image/Ellipse 144.png" class="w-12">
+                    </div>
+                    <div>
+                        <h1 class=" font-[400] text-lg leading-[15px] tracking-[-0.006em] font-gabarito">
+                            Darell Hayden
+                        </h1>
+                        <p class="text-sm mt-2">P.L. Lokhande Marg</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="group px-4 py-4 border border-[#434343] bg-[#131316] rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893]">
+                <!-- Description -->
+                <p
+                    class="text-gray-200 leading-relaxed transition-all duration-500 ease-in-out group-hover:text-white mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. 
+                </p>
+                <hr class="mt-5 border-t border-gray-200" />
+                <div class="flex mt-7 gap-6">
+                    <div>
+                        <img src="image/Ellipse 144.png" class="w-12">
+                    </div>
+                    <div>
+                        <h1 class="font-[400] text-lg leading-[15px] tracking-[-0.006em] font-gabarito">
+                            Darell Hayden
+                        </h1>
+                        <p class="text-sm mt-2">P.L. Lokhande Marg</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="group px-4 py-4 border border-[#434343] bg-[#131316] rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-500 ease-in-out cursor-pointer flex flex-col focus:outline-none focus:ring-2 focus:ring-[#167893]">
+                <!-- Description -->
+                <p
+                    class="text-gray-200 leading-relaxed transition-all duration-500 ease-in-out group-hover:text-white mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. 
+                </p>
+                <hr class="mt-5 border-t border-gray-200" />
+                <div class="flex mt-7 gap-6">
+                    <div>
+                        <img src="image/Ellipse 144.png" class="w-12">
+                    </div>
+                    <div>
+                        <h1 class=" font-[400] text-lg leading-[15px] tracking-[-0.006em] font-gabarito">
+                            Darell Hayden
+                        </h1>
+
+                        <p class="text-sm mt-2">P.L. Lokhande Marg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- section 4 -->
-    <div class="py-8 lg:py-12 bg-white">
+    <div class="py-8 lg:py-12 bg-black">
         <div class="text-center mb-10 lg:mb-20">
-            <h2 class="text-xl lg:text-4xl font-bold text-gray-800">Contact Me</h2>
+            <h2 class="text-xl lg:text-4xl font-bold text-gray-200">Contact Me</h2>
             <div class="mt-2 mx-auto h-0.5 w-12 bg-[#167893] rounded-full"></div>
         </div>
 
-        <div
-            class="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-4 max-w-7xl mx-auto lg:px-5 px-5 text-center justify-center">
+        <!-- <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-4 max-w-7xl mx-auto lg:px-5 px-5 text-center justify-center"> -->
 
             <!-- Address Card -->
-            <a href="">
-                <div class="group px-6 py-8 bg-white text-center lg:w-60"
+            <!-- <a href="">
+                <div class="group px-6 py-8 bg-black text-center lg:w-60"
                     style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;">
                     <div class="flex justify-center items-center h-28 mb-4">
-                        <div class="border-2 border-[#167893] rounded-full p-8 bg-[#167893]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24">
+                        <div class="border-2 border-[#167893] rounded-full p-3 bg-[#167893]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">
                                     <path
@@ -337,17 +563,17 @@
                         </div>
                     </div>
 
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Address</h3>
+                    <h3 class="text-lg font-boldtext-gray-200 mb-2">Address</h3>
                     <p class="text-md text-[#167893]">Ahmdabad</p>
                 </div>
-            </a>
+            </a> -->
 
             <!-- Phone Card -->
-            <a href="tel:+919510086046">
-                <div class="group px-6 py-8 bg-white shadow-md hover:shadow-2xl text-center lg:w-60"
+            <!-- <a href="tel:+919510086046">
+                <div class="group px-6 py-8 bg-black shadow-md hover:shadow-2xl text-center lg:w-60"
                     style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;">
                     <div class="flex justify-center items-center h-28 mb-4">
-                        <div class="border-2 border-[#167893] rounded-full p-8 bg-[#167893]">
+                        <div class="border-2 border-[#167893] rounded-full p-5 bg-[#167893]">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24"
                                 fill="currentColor">
                                 <path
@@ -355,16 +581,16 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Phone</h3>
+                    <h3 class="text-lg font-boldtext-gray-200 mb-2">Phone</h3>
                     <p class="text-md text-[#167893]">+91-9510086046</p>
                 </div>
-            </a>
+            </a> -->
             <!-- Email Card -->
-            <a href="mailto:haenterprises103@gmail.com">
-                <div class="group px-4 py-8 bg-white shadow-md hover:shadow-2xl text-center lg:w-60"
+            <!-- <a href="mailto:haenterprises103@gmail.com">
+                <div class="group px-4 py-8 bg-black shadow-md hover:shadow-2xl text-center lg:w-60"
                     style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;">
                     <div class="flex justify-center items-center h-28 mb-4">
-                        <div class="border-2 border-[#167893] rounded-full p-8 bg-[#167893]">
+                        <div class="border-2 border-[#167893] rounded-full p-5 bg-[#167893]">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24"
                                 fill="currentColor">
                                 <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -375,17 +601,17 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Email</h3>
+                    <h3 class="text-lg font-boldtext-gray-200 mb-2">Email</h3>
                     <p class="text-md text-[#167893]">haenterprises103@gmail.com</p>
                 </div>
-            </a>
+            </a> -->
 
             <!-- Website Card -->
-            <a href="/">
-                <div class="group px-6 py-8 bg-white shadow-md hover:shadow-2xl text-center lg:w-60"
+            <!-- <a href="/">
+                <div class="group px-6 py-8 bg-black shadow-md hover:shadow-2xl text-center lg:w-60"
                     style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;">
                     <div class="flex justify-center items-center h-28 mb-4">
-                        <div class="border-2 border-[#167893] rounded-full p-8 bg-[#167893]">
+                        <div class="border-2 border-[#167893] rounded-full p-5 bg-[#167893]">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="-2 -2 24 24"
                                 fill="currentColor">
                                 <path
@@ -393,59 +619,58 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Website</h3>
+                    <h3 class="text-lg font-boldtext-gray-200 mb-2">Website</h3>
                     <p class="text-md text-[#167893]">yoursite.com</p>
                 </div>
-            </a>
-        </div>
+            </a> -->
+        <!-- </div> -->
 
-        <section class="bg-white py-8 lg:py-10 mt-5">
-            <div class="max-w-7xl mx-auto grid lg:px-5 px-5 grid-cols-1 md:grid-cols-2 items-center">
+        <section class="bg-black mt-5">
+            <div class="max-w-5xl mx-auto px-6">
+                <form id="contact-form"
+                    class="space-y-6 bg-[#0f0f11] border border-gray-800 rounded-xl p-8 md:p-10 shadow-2xl backdrop-blur-sm">
 
-                <!-- Left: Image -->
-                <div class="h-[600px]">
-                    <img src="\image\img1.jpg" alt="About me"
-                        class="w-full h-full max-h-[700px] object-cover shadow-md">
-                </div>
+                    <!-- <h2 class="text-white text-3xl font-bold text-center mb-6">Contact Us</h2> -->
 
-                <!-- Right: Contact Form -->
-                <form id="contact-form" class="space-y-6 bg-[#DEEFF4] p-8 shadow-lg h-[600px]">
+                    <!-- Name -->
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                        <input type="text" id="name" name="name" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#167893] focus:outline-none" />
+                        <input type="text" id="name" name="name" required placeholder="Name"
+                            class="w-full px-4 py-3 bg-[#131316] text-white rounded-md border border-gray-700 focus:ring-2 focus:ring-[#167893] focus:outline-none placeholder:text-gray-400 transition duration-200" />
                     </div>
 
+                    <!-- Email -->
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#167893] focus:outline-none" />
+                        <input type="email" id="email" name="email" required placeholder="Email"
+                            class="w-full px-4 py-3 bg-[#131316] text-white rounded-md border border-gray-700 focus:ring-2 focus:ring-[#167893] focus:outline-none placeholder:text-gray-400 transition duration-200" />
                     </div>
 
+                    <!-- Subject -->
                     <div>
-                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                        <input type="text" id="subject" name="subject"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#167893] focus:outline-none" />
+                        <input type="text" id="subject" name="subject" placeholder="Subject"
+                            class="w-full px-4 py-3 bg-[#131316] text-white rounded-md border border-gray-700 focus:ring-2 focus:ring-[#167893] focus:outline-none placeholder:text-gray-400 transition duration-200" />
                     </div>
 
+                    <!-- Message -->
                     <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <textarea id="message" name="message" rows="4" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#167893] focus:outline-none resize-none"></textarea>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"
+                            class="w-full px-4 py-3 bg-[#131316] text-white rounded-md border border-gray-700 focus:ring-2 focus:ring-[#167893] focus:outline-none placeholder:text-gray-400 resize-none transition duration-200"></textarea>
                     </div>
 
+                    <!-- Submit Button -->
                     <div class="text-center">
                         <button type="submit"
-                            class="bg-[#167893] text-white px-6 py-2 rounded-md hover:bg-[#135f74] transition-colors duration-300">
+                            class="bg-[#167893] w-full text-white font-semibold px-8 py-3 rounded-md hover:bg-[#135f74] active:scale-95 transition-all duration-300 shadow-md hover:shadow-lg">
                             Send Message
                         </button>
                     </div>
                 </form>
             </div>
         </section>
+
     </div>
+
     <!-- footer -->
-    <div class="bg-black text-white py-10">
+    <div class="bg-[#131316] text-white py-10">
         <!-- Social Icons -->
         <div class="flex justify-center items-center gap-6 mb-6">
             <!-- Facebook -->
