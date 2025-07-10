@@ -11,12 +11,6 @@
     <link rel="stylesheet" href="style.css">
 
     <title>H&A Enterprises </title>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("YOUR_PUBLIC_KEY"); // ← Replace this with your actual Public Key
-        })();
-    </script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
@@ -35,7 +29,7 @@
 
 <body class="bg-[#070708] text-white">
     <!-- Swiper Section with Navbar on top -->
-    <div class=" w-full">
+    <div class=" w-full" id="home">
         <!-- Navbar over image -->
         <nav class="absolute top-0 left-0 w-full bg-[#070708]/30  z-50">
             <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-4">
@@ -50,7 +44,7 @@
                     <a href="#contact" class="hover:text-cyan-500 transition">Contact</a>
                 </div>
                 <div>
-                    <a href="#"
+                    <a href="#contact"
                         class="border border-cyan-500 text-cyan-500 px-4 py-1 rounded hover:bg-cyan-500 hover:text-white transition">
                         Contact Me
                     </a>
@@ -75,7 +69,7 @@
                             We deliver modern, future-ready solutions tailored for today's fast-paced industrial and
                             tender environments.
                         </p>
-                        <button class="w-[120px] h-[40px] mt-10 rounded font-bold bg-white text-black/80 
+                        <button class="w-[120px] h-[40px] mt-10 rounded font-bold bg-white/80 text-black/80 
          shadow-xl hover:shadow-lg hover:scale-105 transition-all duration-300">
                             Explore
                         </button>
@@ -98,7 +92,7 @@
                             services.
                         </p>
                         <button
-                            class="w-[120px] font-bold mt-10 h-[40px] rounded bg-white text-black/80 hover:bg-gray-100 transition">Explore</button>
+                            class="w-[120px] font-bold mt-10 h-[40px] rounded bg-white/80 text-black/80 hover:bg-gray-100 transition">Explore</button>
                     </div>
                 </div>
 
@@ -116,7 +110,7 @@
                             custom solutions.
                         </p>
                         <button
-                            class="w-[120px] font-bold mt-10 h-[40px] rounded bg-white text-black/80 hover:bg-gray-100 transition">Explore</button>
+                            class="w-[120px] font-bold mt-10 h-[40px] rounded bg-white/80 text-black/80 hover:bg-gray-100 transition">Explore</button>
                     </div>
                 </div>
             </div>
@@ -132,7 +126,7 @@
     <!-- background: #0A1E2B; -->
 
     <!-- About us -->
-    <div class="py-8 lg:pt-24 bg-[#070708]">
+    <div class="py-8 lg:pt-24 bg-[#070708]" id="about">
         <div class="text-center px-4">
             <h2 class="text-xl lg:text-4xl font-bold text-gray-200">About Us</h2>
             <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
@@ -180,7 +174,7 @@
             <!-- Image Block -->
             <div class="overflow-hidden group mt-10 lg:mt-0">
                 <img src="image/img11.jpg" alt="H&A Enterprises"
-                    class="w-[600px] h-[350px] rounded-3xl shadow-lg object-cover transform group-hover:scale-105 transition duration-500 ease-in-out" />
+                    class="lg:w-[600px] lg:h-[350px] rounded-xl shadow-lg object-cover transform group-hover:scale-105 transition duration-500 ease-in-out" />
             </div>
 
         </div>
@@ -190,6 +184,7 @@
         </div>
         <div class="w-full mx-auto px-5 lg:px-20 pt-10 lg:pt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <!-- Left Side Image -->
+
             <div class="overflow-hidden rounded-xl shadow-lg group">
                 <img src="image/idea.jpg" alt="Our Vision"
                     class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 ease-in-out" />
@@ -224,7 +219,7 @@
 
     <!-- section 2 -->
     <!-- <div class="max-w-7xl mx-auto w-full px-4"> -->
-    <div class="py-8 lg:py-24 bg-[#070708]">
+    <div class="py-8 lg:py-24 bg-[#070708]" id="qualification">
         <div class="text-center px-4">
             <h2 class="text-xl lg:text-4xl font-bold text-gray-200">Our Services</h2>
             <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
@@ -653,93 +648,11 @@
         </div>
     </div>
     <!-- section 4 -->
-    <div class="py-8 lg:py-12 mb-10 bg-[#070708]">
+    <div class="py-8 lg:py-12 mb-10 bg-[#070708]" id="contact">
         <div class="text-center mb-10 lg:mb-20">
             <h2 class="text-xl lg:text-4xl font-bold text-gray-200">Contact Me</h2>
             <div class="mt-2 mx-auto h-0.5 w-12 bg-[#167893] rounded-full"></div>
         </div>
-
-        <!-- <div
-            class="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-4 max-w-7xl mx-auto lg:px-5 px-5 text-center justify-center"> -->
-
-        <!-- Address Card -->
-        <!-- <a href="">
-                <div class="group px-6 py-8 bg-[#070708] text-center lg:w-60"
-                    style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;">
-                    <div class="flex justify-center items-center h-28 mb-4">
-                        <div class="border-2 border-[#167893] rounded-full p-3 bg-[#167893]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24">
-                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2">
-                                    <path
-                                        d="M20 6v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2M10 16h6" />
-                                    <path d="M11 11a2 2 0 1 0 4 0a2 2 0 1 0-4 0M4 8h3m-3 4h3m-3 4h3" />
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <h3 class="text-lg font-boldtext-gray-200 mb-2">Address</h3>
-                    <p class="text-md text-[#167893]">Ahmdabad</p>
-                </div>
-            </a> -->
-
-        <!-- Phone Card -->
-        <!-- <a href="tel:+919510086046">
-                <div class="group px-6 py-8 bg-[#070708] shadow-md hover:shadow-2xl text-center lg:w-60"
-                    style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;">
-                    <div class="flex justify-center items-center h-28 mb-4">
-                        <div class="border-2 border-[#167893] rounded-full p-5 bg-[#167893]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1c-9.39 0-17-7.61-17-17a1 1 0 0 1 1-1H6.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-boldtext-gray-200 mb-2">Phone</h3>
-                    <p class="text-md text-[#167893]">+91-9510086046</p>
-                </div>
-            </a> -->
-        <!-- Email Card -->
-        <!-- <a href="mailto:haenterprises103@gmail.com">
-                <div class="group px-4 py-8 bg-[#070708] shadow-md hover:shadow-2xl text-center lg:w-60"
-                    style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;">
-                    <div class="flex justify-center items-center h-28 mb-4">
-                        <div class="border-2 border-[#167893] rounded-full p-5 bg-[#167893]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2">
-                                    <path
-                                        d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2zM4 8l8 5 8-5" />
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-boldtext-gray-200 mb-2">Email</h3>
-                    <p class="text-md text-[#167893]">haenterprises103@gmail.com</p>
-                </div>
-            </a> -->
-
-        <!-- Website Card -->
-        <!-- <a href="/">
-                <div class="group px-6 py-8 bg-[#070708] shadow-md hover:shadow-2xl text-center lg:w-60"
-                    style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;">
-                    <div class="flex justify-center items-center h-28 mb-4">
-                        <div class="border-2 border-[#167893] rounded-full p-5 bg-[#167893]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="-2 -2 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm0 18c-.553 0-1.119-.568-1.747-1.823A10.8 10.8 0 0 1 7.47 14h5.06a10.8 10.8 0 0 1-.783 2.177C11.119 17.432 10.447 18 10 18zM3.07 6A8.04 8.04 0 0 1 7.4 2.786 10.8 10.8 0 0 0 6.279 6zm13.86 0h-2.346a10.8 10.8 0 0 0-1.121-3.214A8.04 8.04 0 0 1 16.93 6zM7.112 8h5.776a17.8 17.8 0 0 1 0 4H7.112A18 18 0 0 1 7 10c0-.685.038-1.355.112-2zM2.252 8H5.1a20 20 0 0 0 0 4H2.252A8.002 8.002 0 0 1 2.252 8zM14.9 8h2.848a8.05 8.05 0 0 1 0 4H14.9a20 20 0 0 0 0-4zM3.07 14h2.346a10.8 10.8 0 0 0 1.121 3.214A8.04 8.04 0 0 1 3.07 14zm13.86 0a8.04 8.04 0 0 1-3.467 3.214c.472-.907.855-1.997 1.121-3.214z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-boldtext-gray-200 mb-2">Website</h3>
-                    <p class="text-md text-[#167893]">yoursite.com</p>
-                </div>
-            </a> -->
-        <!-- </div> -->
 
         <section class="bg-[#070708] mt-5">
             <div class="max-w-7xl mx-auto px-6">
@@ -765,7 +678,9 @@
                                         </svg>
 
                                     </h1>
-                                    <p class="text-md text-gray-200 mb-4">+91 95100 86046</p>
+                                    <a href="tel:+919510086046">
+                                        <p class="text-md text-gray-200 mb-4">+91 95100 86046</p>
+                                    </a>
                                 </div>
 
                                 <div class="flex gap-4">
@@ -779,7 +694,9 @@
                                             </g>
                                         </svg>
                                     </h1>
-                                    <p class="text-md text-gray-200 mb-4">haenterprises103@gmail.com</p>
+                                    <a href="mailto:haenterprises103@gmail.com">
+                                        <p class="text-md text-gray-200 mb-4">haenterprises103@gmail.com</p>
+                                    </a>
                                 </div>
 
                                 <div class="flex gap-4">
@@ -793,13 +710,18 @@
 
 
                                     </h1>
-                                    <p class="text-justify lg:hidden  block"> 523, 5th Floor, North Plaza, Nr. 4D Square
-                                        Mall,
-                                        Visat Gandhinagar Highway, Ahmedabad-380005</p>
-                                    <p class="text-md text-gray-200 lg:block hidden">
-                                        523, 5th Floor, North Plaza, Nr. 4D Square Mall,<br>
-                                        Visat Gandhinagar Highway, Ahmedabad-380005
-                                    </p>
+                                    <a href="" class="lg:hidden  block">
+                                        <p class="text-justify"> 523, 5th Floor, North Plaza, Nr. 4D
+                                            Square
+                                            Mall,
+                                            Visat Gandhinagar Highway, Ahmedabad-380005</p>
+                                    </a>
+                                    <a href="" class="lg:block hidden">
+                                        <p class="text-md text-gray-200">
+                                            523, 5th Floor, North Plaza, Nr. 4D Square Mall,<br>
+                                            Visat Gandhinagar Highway, Ahmedabad-380005
+                                        </p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -876,10 +798,10 @@
                 <div>
                     <h1 class="text-lg font-semibold mb-3">Company</h1>
                     <ul class="space-y-3 text-md text-gray-300">
-                        <li><a href="#" class="hover:text-[#167893]">Home</a></li>
-                        <li><a href="#" class="hover:text-[#167893]">About Us</a></li>
-                        <li><a href="#" class="hover:text-[#167893]">Services</a></li>
-                        <li><a href="#" class="hover:text-[#167893]">Contact Us</a></li>
+                        <li><a href="#home" class="hover:text-[#167893]">Home</a></li>
+                        <li><a href="#about" class="hover:text-[#167893]">About Us</a></li>
+                        <li><a href="#qualification" class="hover:text-[#167893]">Services</a></li>
+                        <li><a href="#contact" class="hover:text-[#167893]">Contact Us</a></li>
                     </ul>
                 </div>
 
