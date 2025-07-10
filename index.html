@@ -11,10 +11,19 @@
     <link rel="stylesheet" href="style.css">
 
     <title>H&A Enterprises </title>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
         (function () {
             emailjs.init("YOUR_PUBLIC_KEY"); // ← Replace this with your actual Public Key
+        })();
+    </script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "V282z3jrbOlLfITiE",
+            });
         })();
     </script>
     <style>
@@ -133,15 +142,15 @@
                 dolore magna aliqua.
             </p>
         </div>
-        <div class="w-full mx-auto px-5 lg:px-20 py-10 lg:py-16 grid grid-cols-1 md:grid-cols-3 items-center">
+        <div class="w-full mx-auto px-5 lg:px-20 py-10 lg:py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <!-- Left Content (Text & Stats) -->
-            <div class="space-y-6 md:col-span-2">
+            <div class="space-y-6 md:col-span-1">
                 <!-- Heading & Intro -->
                 <div>
                     <h1 class="text-[#167893] text-xl lg:text-4xl font-extrabold tracking-tight">About H&A Enterprises
                     </h1>
                     <p class="text-xl text-gray-400 mt-2">Building a Better Future with Technology</p>
-                    <p class="text-gray-300 mt-4 leading-relaxed lg:w-[700px] mt-5">
+                    <p class="text-gray-300 mt-4 leading-relaxed  mt-5">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatibus nisi sequi
                         repellendus. Explicabo ab
                         nam dolores non animi alias nostrum, ullam dicta, libero corporis a quae ex hic enim. Lorem
@@ -152,7 +161,7 @@
 
                 <!-- Stats Section -->
                 <div
-                    class="grid grid-cols-3 gap-6 mt-6 bg-[#131316] text-center lg:text-left p-4 lg:p-8 mt-10 rounded-xl lg:w-[700px] border border-[#434343]">
+                    class="grid grid-cols-3 gap-6 mt-6 bg-[#131316] text-center lg:text-left p-4 lg:p-8 mt-10 rounded-xl lg:w-[600px] border border-[#434343]">
                     <div class="">
                         <h2 class="text-xl lg:text-3xl font-bold text-[#167893]">10K+</h2>
                         <p class="text-gray-400 text-sm mt-1">Work Experience</p>
@@ -169,11 +178,11 @@
             </div>
 
             <!-- Image Block -->
-            <div class="overflow-hidden rounded-3xl shadow-lg group mt-10 lg:mt-0">
+            <div class="overflow-hidden group mt-10 lg:mt-0">
                 <img src="image/img11.jpg" alt="H&A Enterprises"
-                    class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 ease-in-out" />
+                    class="w-[600px] h-[350px] rounded-3xl shadow-lg object-cover transform group-hover:scale-105 transition duration-500 ease-in-out" />
             </div>
-            
+
         </div>
         <div class="text-center mt-0 lg:mt-10">
             <h1 class="text-[#167893] font-bold lg:text-2xl text-xl">Our Vision And Mission</h1>
@@ -478,9 +487,9 @@
         </div>
     </div> -->
 
-  
+
     <!-- Why Choose Us -->
-     
+
     <div class="pb-10 lg:pb-24 bg-[#070708]">
         <div class="text-center px-4 mt-5 lg:mt-0">
             <h2 class="text-xl lg:text-4xl font-bold text-gray-200">Why Choose H&A Enterprises</h2>
@@ -931,13 +940,13 @@
 <script>
     const navbar = document.getElementById("navbar");
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-            navbar.classList.remove("-translate-y-full");
-        } else {
-            navbar.classList.add("-translate-y-full");
-        }
-    });
+    // window.addEventListener("scroll", () => {
+    //     if (window.scrollY > 100) {
+    //         navbar.classList.remove("-translate-y-full");
+    //     } else {
+    //         navbar.classList.add("-translate-y-full");
+    //     }
+    // });
 
     // slider
     const swiper = new Swiper(".mySwiper", {
@@ -957,7 +966,7 @@
     document.getElementById("contact-form").addEventListener("submit", function (event) {
         event.preventDefault();
 
-        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this) // ← Replace these
+        emailjs.sendForm("service_wrxzwik", "template_jfh6e5v", this) // ← Replace these
             .then(function () {
                 alert("Message sent successfully!");
                 document.getElementById("contact-form").reset();
