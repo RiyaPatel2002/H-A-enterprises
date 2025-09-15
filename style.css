@@ -1,16 +1,29 @@
-.swiper-button-prev::after,
-  .swiper-button-next::after {
-    color: white;
-    font-size: 2rem;
-  }
+.swiper-button-prev {
+  font-size: 10px;
+  color: black;
+  size: 3px;
+}
 
- @media (max-width: 640px) {
+.swiper-button-next {
+  color: black;
+  size: 3px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: white;
+  /* font-size: 2rem; */
+}
+
+@media (max-width: 640px) {
+
   .swiper-button-prev::after,
   .swiper-button-next::after {
     color: black;
-    font-size: 1rem; /* Smaller size on mobile */
+    font-size: 1rem;
   }
 }
+
 /* [#00011C] */
 /* [#167893] */
 /* bg-[#070708] */
