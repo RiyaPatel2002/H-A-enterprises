@@ -12,7 +12,7 @@
 
   <!-- Navbar -->
   <nav class="absolute top-0 left-0 w-full bg-[#070708]/30 z-50">
-    <div class="lg:px-20 px-5 mx-auto flex items-center justify-between h-16">
+    <div class="lg:px-20 px-5 mx-auto flex items-center justify-between h-16 border-b border-gray-700">
       <!-- Logo -->
       <img src="image/hrrr-removebg-preview.png" alt="Logo" class="w-14 lg:w-20" />
 
@@ -35,8 +35,7 @@
       <!-- Mobile Menu Button -->
       <button id="menu-btn" class="lg:hidden text-white focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
@@ -65,15 +64,185 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="flex flex-col justify-center items-center text-center h-[600px] px-6">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4 mt-20">
-      🚀 Coming <span class="text-cyan-500">Soon</span>
-    </h1>
-    
+  <!-- CONTACT SECTION -->
+  <section class="relative pt-40 pb-20 px-6 overflow-hidden">
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+      <!-- Left: Text -->
+      <div data-aos="fade-up" class="lg:w-1/2 space-y-6 mx-5">
+        <h1 class="text-4xl md:text-5xl font-bold text-[#15A2B8">Get in Touch</h1>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Have a project in mind or want to learn more about Tender Enterprise?
+          Let's discuss how we can collaborate to achieve success.
+        </p>
+        <div class="space-y-3 mt-8">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#15A2B8]" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2zM4 8l8 5 8-5" />
+            </svg>
+            <a href="mailto:haenterprises103@gmail.com"
+              class="text-gray-300 hover:text-[#15A2B8] transition">haenterprises103@gmail.com</a>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#15A2B8]" viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1c-9.39 0-17-7.61-17-17a1 1 0 0 1 1-1H6.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z" />
+            </svg>
+            <a href="tel:+919106634002" class="text-gray-300 hover:text-[#15A2B8] transition">+91 9106634002</a>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#15A2B8]" viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7" />
+            </svg>
+            <p class="text-gray-300">
+              4th Floor, Vrundavan Apartment, Panchavati Society, Near Panchavati Circle,
+              Ambawadi, Ahmedabad, Gujarat - 380006
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div data-aos="fade-left" class="lg:w-1/2 flex justify-center">
+        <img src="image/contact1.png" alt="Contact Illustration" class="w-[85%] max-w-md rounded-xl shadow-lg">
+      </div>
+    </div>
   </section>
 
-  
+  <!-- Contact Form Section -->
+  <section class="py-20 px-6 bg-[#0B0B0D] relative overflow-hidden">
+    <div class="max-w-5xl mx-auto glass-effect rounded-2xl md:p-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4 text-[#15A2B8]">Send Us a Message</h2>
+      <p class="text-gray-400 mb-10">
+        We’d love to hear from you. Fill out the form below and we’ll get back to you soon.
+      </p>
+
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Your Name"
+          class="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-white focus:ring-2 focus:ring-[#15A2B8] outline-none transition" />
+
+        <input type="email" placeholder="Your Email"
+          class="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-white focus:ring-2 focus:ring-[#15A2B8] outline-none transition" />
+
+        <input type="text" placeholder="Subject"
+          class="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-white focus:ring-2 focus:ring-[#15A2B8] outline-none transition md:col-span-2" />
+
+        <textarea placeholder="Your Message" rows="5"
+          class="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-white focus:ring-2 focus:ring-[#15A2B8] outline-none transition md:col-span-2"></textarea>
+
+        <button type="submit"
+          class="md:col-span-2 bg-[#15A2B8] hover:bg-[#118095] text-white font-semibold py-3 rounded-md transition-all duration-300 shadow-md hover:shadow-[#15A2B8]/40">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- GOOGLE MAP SECTION -->
+  <section class="h-[400px] mt-16" data-aos="fade-up" data-aos-delay="300">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.897010567569!2d72.54893057529963!3d23.022505416058134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f3e2d6df65%3A0xe0d1d0c92a51cdb6!2sAmbawadi%2C%20Ahmedabad%2C%20Gujarat%20380006!5e0!3m2!1sen!2sin!4v1698230000000!5m2!1sen!2sin"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- footer -->
+  <div class="bg-[#131316] text-white">
+    <div class="mx-auto px-4 sm:px-6 lg:px-20 py-8 lg:py-16">
+      <!-- Grid layout: 1st column spans 2 rows -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+        <!-- Left Logo + Description (spans 2 rows) -->
+        <div class="lg:col-span-2">
+          <img src="image/hrrr-removebg-preview.png" alt="Logo" class="mb-4 w-20 lg:w-24 object-contain">
+          <p class="text-md text-gray-300 lg:w-[420px] w-full">
+            We empower enterprises with innovative technology solutions, ensuring scalability,
+            security, and efficiency to drive sustainable business growth.
+          </p>
+        </div>
+
+
+        <!-- Service Links -->
+        <div>
+          <h1 class="text-lg font-semibold mb-3">Service</h1>
+          <ul class="space-y-3 text-md text-gray-300">
+            <li><a href="#service1" class="hover:text-[#167893]">GeM Services</a></li>
+            <li><a href="#service2" class="hover:text-[#167893]">Legal Advisory </a></li>
+            <li><a href="#" class="hover:text-[#167893]">Secretarial & Compliance</a></li>
+            <li><a href="#" class="hover:text-[#167893]">IT Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Links -->
+        <div>
+          <h1 class="text-lg font-semibold mb-3">Company</h1>
+          <ul class="space-y-3 text-md text-gray-300">
+            <li><a href="#home" class="hover:text-[#167893]">Home</a></li>
+            <li><a href="#about" class="hover:text-[#167893]">About Us</a></li>
+            <li><a href="#qualification" class="hover:text-[#167893]">Services</a></li>
+            <li><a href="#contact" class="hover:text-[#167893]">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Social / Connect Links -->
+        <div>
+          <h1 class="text-lg font-semibold mb-6">Follow Us</h1>
+
+          <div class="space-x-5 text-md text-gray-300 flex flex-row">
+            <!-- <li><a href="#" class="hover:text-[#167893]">Facebook</a></li>
+                        <li><a href="#" class="hover:text-[#167893]">Twitter</a></li>
+                        <li><a href="#" class="hover:text-[#167893]">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-[#167893]">Email Us</a></li> -->
+            <div class="border-2 border-[#167893] rounded-full p-2 bg-[#167893]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path fill="currentColor"
+                  d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z" />
+              </svg>
+            </div>
+
+
+            <a href="https://www.instagram.com/haenterprises_consultancy?igsh=MXNzZzA2ZW45MGJpOA%3D%3D&utm_source=qr"
+              target="_blank" rel="noopener noreferrer">
+              <div class="border-2 border-[#167893] rounded-full p-2 bg-[#167893]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <circle cx="17" cy="7" r="1.5" fill="currentColor" fill-opacity="0" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M16 3c2.76 0 5 2.24 5 5v8c0 2.76 -2.24 5 -5 5h-8c-2.76 0 -5 -2.24 -5 -5v-8c0 -2.76 2.24 -5 5 -5h4Z" />
+                    <path d="M12 8c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4" />
+                  </g>
+                </svg>
+              </div>
+            </a>
+
+            <div class="border-2 border-[#167893] rounded-full p-2 bg-[#167893]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19.89 7.34c-0.09 0.33 -0.49 1.16 -1.17 1.95c-0.45 8.68 -8.87 11.5 -14.64 8.59c-0.79 -1.05 2.85 -0.62 4.18 -2.63c-5.03 -2.57 -4.63 -9.44 -3.62 -9.16c2.37 3.19 6.19 3.48 6.81 3.19c0 -0.73 -0.31 -2.32 1.41 -3.65c0.99 -0.71 3.06 -1.34 4.93 0.69c0.32 0.21 0.78 0.3 1.47 0.15c0.41 -0.21 0.95 -0.07 0.67 0.66Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="text-center text-xs text-white bg-[#135f74] py-3">
+      &copy; 2025 H&amp;A Enterprises. All rights reserved.
+    </div>
+  </div>
+
+  <!-- Include AOS (Animate on Scroll) Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <script>
     const menuBtn = document.getElementById("menu-btn");
@@ -89,6 +258,13 @@
       mobileMenu.classList.remove("translate-x-0");
       mobileMenu.classList.add("translate-x-full");
     });
+
+    AOS.init({
+      once: true,
+      duration: 1000,
+      offset: 100,
+    });
+
   </script>
 
 </body>
