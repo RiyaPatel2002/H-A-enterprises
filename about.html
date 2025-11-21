@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Agence</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body class="font-sans bg-black">
@@ -76,7 +92,7 @@
     </section>
 
     <!-- Introduction Section -->
-    <section class="w-full mx-auto px-5 lg:px-20 pt-14 lg:pt-24 gap-10 items-center">
+    <section class="w-full mx-auto px-5 lg:px-20 pt-14 lg:pt-24 gap-10 items-center fade-up">
         <p class="text-white font-semibold">ABOUT ENTERPRISE</p>
         <h2 class="text-xl lg:text-4xl font-bold mt-2 text-cyan-500">
             Driving Growth Through Smart Tender & Business Solutions
@@ -89,9 +105,9 @@
             highly competitive markets.
         </p>
 
-        <div class="grid md:grid-cols-3 gap-8 mt-8">
+        <div class="grid md:grid-cols-3 gap-8 mt-8 fade-up">
             <!-- Service 1 -->
-            <div class="p-6 bg-[#131316] rounded-xl shadow-2xl hover:shadow-lg">
+            <div class="p-6 bg-[#131316] rounded-xl shadow-2xl hover:shadow-lg fade-up">
                 <div class="text-4xl mb-3">💰</div>
                 <h3 class="font-bold text-lg text-white">Competitive Tender Pricing</h3>
                 <p class="text-gray-300 text-sm mt-2">
@@ -101,7 +117,7 @@
             </div>
 
             <!-- Service 2 -->
-            <div class="p-6 bg-[#1e1e1e] rounded-xl text-white shadow hover:shadow-lg">
+            <div class="p-6 bg-[#1e1e1e] rounded-xl text-white shadow hover:shadow-lg fade-up">
                 <div class="text-black text-4xl mb-3">📊</div>
                 <h3 class="font-bold text-lg">Financial & Feasibility Analysis</h3>
                 <p class="text-white text-sm mt-2">
@@ -111,7 +127,7 @@
             </div>
 
             <!-- Service 3 -->
-            <div class="p-6 bg-[#131316] rounded-xl shadow hover:shadow-lg">
+            <div class="p-6 bg-[#131316] rounded-xl shadow hover:shadow-lg fade-up">
                 <div class="text-orange-500 text-4xl mb-3">👩‍💼</div>
                 <h3 class="font-bold text-lg text-white">Expert Tender Management</h3>
                 <p class="text-gray-300 text-sm mt-2">
@@ -123,14 +139,14 @@
     </section>
 
     <!-- Excellence Section -->
-    <section class="bg-[#131316] py-16 px-6 mt-20 lg:mt-24">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section class="bg-[#131316] py-16 px-6 mt-20 lg:mt-24 fade-up">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center fade-up">
             <!-- Left Image -->
             <div>
                 <img src="image/about4.jpg" alt="About Us" class="rounded-xl shadow-lg w-full object-cover">
             </div>
             <!-- Right Content -->
-            <div class="text-center md:text-left">
+            <div class="text-center md:text-left fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-white">
                     Our Commitment to Excellence
                 </h2>
@@ -146,15 +162,15 @@
     </section>
 
     <!-- Team Section -->
-    <section class="bg-black py-10 lg:py-16 px-6">
-        <div class="max-w-6xl w-full mx-auto">
+    <section class="bg-black py-10 lg:py-16 px-6 fade-up">
+        <div class="max-w-6xl w-full mx-auto fade-up">
             <h2 class="text-3xl font-bold mt-2 text-white">Founder’s Message</h2>
             <p class="mt-4 text-gray-400 max-w-2xl">
                 Our leadership team brings together expertise in tender bidding, finance,
                 and project execution. Together, we drive enterprise success across industries.
             </p>
         </div>
-        <div class="max-w-6xl mx-auto py-12">
+        <div class="max-w-6xl mx-auto py-12 fade-up">
             <div class="flex flex-col md:flex-row items-center gap-12">
 
                 <!-- Team Member Card -->
@@ -169,7 +185,7 @@
                 </div>
 
                 <!-- Mission / Text Section -->
-                <div class="w-full md:w-1/2 text-center md:text-left">
+                <div class="w-full md:w-1/2 text-center md:text-left fade-up">
                     <h1 class="text-2xl md:text-3xl font-bold text-white">We convert your ideas into reality!</h1>
                     <p class="mt-4 text-gray-300 leading-relaxed">
                         At H&A Enterprises, our mission is to empower businesses through innovative tender solutions
@@ -294,6 +310,24 @@
         mobileMenu.classList.remove('translate-x-0');
         mobileMenu.classList.add('translate-x-full');
     });
+
+    //  smooth transction
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
+            });
+        },
+        {
+            threshold: 0.05,                // Trigger earlier (5% visible)
+            rootMargin: "0px 0px -10% 0px", // Improve mobile trigger
+        }
+    );
+
+    document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
 </script>
 
 </html>
