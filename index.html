@@ -25,7 +25,8 @@
         html {
             scroll-behavior: smooth;
         }
-         .fade-up {
+
+        .fade-up {
             opacity: 0;
             transform: translateY(40px);
             transition: all 0.8s ease-in-out;
@@ -273,7 +274,8 @@
             </p>
         </div>
 
-        <div class="w-full mx-auto px-5 lg:px-20 pt-10 lg:pt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center fade-up">
+        <div
+            class="w-full mx-auto px-5 lg:px-20 pt-10 lg:pt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center fade-up">
             <!-- Left Side Image -->
             <div class="overflow-hidden rounded-xl shadow-lg group">
                 <img src="image/img/idea.webp" alt="Our Vision"
@@ -356,7 +358,8 @@
 
                 <!-- Image/Icon Section -->
                 <div class="flex justify-center items-center mb-4">
-                    <img src="image/img/Legal Advisory.webp" alt="Legal Advisory Icon" class="object-contain rounded-lg" />
+                    <img src="image/img/Legal Advisory.webp" alt="Legal Advisory Icon"
+                        class="object-contain rounded-lg" />
                 </div>
 
                 <!-- Title -->
@@ -604,7 +607,8 @@
             </ul>
             <!-- Image (optional) -->
             <div class="flex justify-center">
-                <img src="image/img/img_why.webp" alt="Why Choose Us" class="w-full mt-10 lg:mt-16 rounded-2xl shadow-xl" />
+                <img src="image/img/img_why.webp" alt="Why Choose Us"
+                    class="w-full mt-10 lg:mt-16 rounded-2xl shadow-xl" />
             </div>
 
             <!-- Text Content -->
@@ -998,14 +1002,24 @@
                 alert("Failed to send message. Please try again.");
             });
     });
-//  smooth transction
-    const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add("visible");
+    //  smooth transction
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
             });
-        }, { threshold: 0.2 });
+        },
+        {
+            threshold: 0.05,                // Trigger earlier (5% visible)
+            rootMargin: "0px 0px -10% 0px", // Improve mobile trigger
+        }
+    );
 
-        document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+    document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
+
 </script>
 
 </html>
