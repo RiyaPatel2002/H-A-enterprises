@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
 
     <title>H&A Enterprises </title>
-    <link rel="icon" type="image/png" href="image/hrrr-removebg-preview.png" class="w-20 lg:w-32">
+    <link rel="icon" type="image/png" href="image/img/hrrr-removebg-preview.webp" class="w-20 lg:w-32">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
@@ -25,6 +25,16 @@
         html {
             scroll-behavior: smooth;
         }
+         .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -35,7 +45,7 @@
         <nav class="absolute top-0 left-0 w-full bg-[#070708]/30 z-50">
             <div class="lg:px-20 px-5 mx-auto flex items-center justify-between h-16">
                 <!-- Logo -->
-                <img src="image/hrrr-removebg-preview.png" alt="Logo" class="w-14 lg:w-20" />
+                <img src="image/img/hrrr-removebg-preview.webp" alt="Logo" class="w-14 lg:w-20" />
 
                 <!-- Desktop Links -->
                 <div class="hidden lg:flex space-x-6 font-medium text-white text-center">
@@ -70,7 +80,7 @@
 
                 <!-- Top Section with Logo & Close -->
                 <div class="flex items-center justify-between p-4 border-b border-gray-700">
-                    <img src="image/hrrr-removebg-preview.png" alt="Logo" class="w-16" />
+                    <img src="image/img/hrrr-removebg-preview.webp" alt="Logo" class="w-16" />
                     <button id="close-btn" class="text-white text-2xl font-bold">
                         ✕
                     </button>
@@ -131,7 +141,7 @@
 
                 <!-- Slide 1 -->
                 <div class="swiper-slide relative">
-                    <img src="image/h1.webp" alt="Background" class="w-full h-[500px] lg:h-[100vh] object-cover" />
+                    <img src="image/img/h1.webp" alt="Background" class="w-full h-[500px] lg:h-[100vh] object-cover" />
                     <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center mt-10 z-30">
                         <p
                             class="text-white font-bold text-xl sm:text-3xl md:text-5xl lg:text-6xl max-w-3xl leading-tight">
@@ -152,7 +162,7 @@
                 <!-- Slide 2 and 3... same as before -->
                 <!-- Slide 2 -->
                 <div class="swiper-slide relative">
-                    <img src="image/h2.webp" alt="Background" class="w-full h-[500px] lg:h-[100vh] object-cover" />
+                    <img src="image/img/h2.webp" alt="Background" class="w-full h-[500px] lg:h-[100vh] object-cover" />
                     <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center mt-10 z-30">
                         <p
                             class="text-white font-bold text-xl sm:text-3xl md:text-5xl lg:text-6xl max-w-3xl leading-tight">
@@ -170,7 +180,7 @@
 
                 <!-- Slide 3 -->
                 <div class="swiper-slide relative">
-                    <img src="image/h3.webp" alt="Background" class="w-full h-[500px] lg:h-[100vh] object-cover" />
+                    <img src="image/img/h3.webp" alt="Background" class="w-full h-[500px] lg:h-[100vh] object-cover" />
                     <div class="absolute inset-0 flex flex-col items-center justify-center px-4 mt-10 text-center z-30">
                         <p
                             class="text-white font-bold text-xl sm:text-3xl md:text-5xl lg:text-6xl max-w-3xl leading-tight">
@@ -200,7 +210,7 @@
     <!-- background: #0A1E2B; -->
 
     <!-- About us -->
-    <div class="py-8 lg:pt-24 bg-[#070708]" id="about">
+    <div class="py-8 lg:pt-24 bg-[#070708] fade-up" id="about">
         <div class="text-center px-4">
             <h2 class="text-xl lg:text-4xl font-bold text-gray-200 font-[Convergence]">About Us</h2>
             <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
@@ -252,21 +262,21 @@
 
             <!-- Image -->
             <div class="overflow-hidden group mt-10 lg:mt-0 rounded-xl shadow-lg flex justify-center">
-                <img src="image/img11.jpg" alt="Tender Enterprise"
+                <img src="image/img/img11.webp" alt="Tender Enterprise"
                     class="lg:w-[600px] lg:h-[350px] object-cover transform group-hover:scale-105 transition duration-500 ease-in-out" />
             </div>
         </div>
 
-        <div class="text-center mt-0 lg:mt-10">
+        <div class="text-center mt-0 lg:mt-10 fade-up">
             <h1 class="text-[#167893] font-bold lg:text-2xl text-xl">Our Vision And Mission</h1>
             <p class="text-xl lg:text-3xl text-gray-300 mt-1 lg:mt-3 text-medium">What drives Tender Enterprise forward
             </p>
         </div>
 
-        <div class="w-full mx-auto px-5 lg:px-20 pt-10 lg:pt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="w-full mx-auto px-5 lg:px-20 pt-10 lg:pt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center fade-up">
             <!-- Left Side Image -->
             <div class="overflow-hidden rounded-xl shadow-lg group">
-                <img src="image/idea.jpg" alt="Our Vision"
+                <img src="image/img/idea.webp" alt="Our Vision"
                     class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 ease-in-out" />
             </div>
 
@@ -299,7 +309,7 @@
 
     <!-- section 2 -->
     <!-- <div class="max-w-7xl mx-auto w-full px-4"> -->
-    <div class="py-8 lg:py-24 bg-[#070708]" id="qualification">
+    <div class="py-8 lg:py-24 bg-[#070708] fade-up" id="qualification">
         <div class="text-center px-4">
             <h2 class="text-xl lg:text-4xl font-bold text-gray-200 font-[Convergence]">Our Services</h2>
             <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
@@ -319,7 +329,7 @@
 
                 <!-- Image/Icon Section -->
                 <div class="flex justify-center items-center mb-4">
-                    <img src="image/Gem.jpeg" alt="GEM Consultant Icon" class="object-contain rounded-lg" />
+                    <img src="image/img/Gem.webp" alt="GEM Consultant Icon" class="object-contain rounded-lg" />
                 </div>
 
                 <!-- Title -->
@@ -346,7 +356,7 @@
 
                 <!-- Image/Icon Section -->
                 <div class="flex justify-center items-center mb-4">
-                    <img src="image/Legal Advisory.jpg" alt="Legal Advisory Icon" class="object-contain rounded-lg" />
+                    <img src="image/img/Legal Advisory.webp" alt="Legal Advisory Icon" class="object-contain rounded-lg" />
                 </div>
 
                 <!-- Title -->
@@ -368,7 +378,7 @@
 
                 <!-- Icon/Image Wrapper -->
                 <div class="flex justify-center items-center mb-4">
-                    <img src="image/Compliance.jpg" alt="Service Icon" class="object-contain rounded-lg" />
+                    <img src="image/img/Compliance.webp" alt="Service Icon" class="object-contain rounded-lg" />
                 </div>
 
                 <!-- Heading -->
@@ -396,7 +406,7 @@
 
                 <!-- Image/Icon Section -->
                 <div class="flex justify-center items-center mb-4">
-                    <img src="image/s1.png" alt="Legal Advisory Icon" class="object-contain" />
+                    <img src="image/img/s1.webp" alt="Legal Advisory Icon" class="object-contain" />
                 </div>
 
                 <!-- Title -->
@@ -418,7 +428,7 @@
 
                 <!-- Icon/Image Wrapper -->
                 <div class="flex justify-center items-center mb-4">
-                    <img src="image/img1.jpg" alt="Service Icon" class="object-contain rounded-lg" />
+                    <img src="image/img/img1.jpg" alt="Service Icon" class="object-contain rounded-lg" />
                 </div>
 
                 <!-- Heading -->
@@ -446,7 +456,7 @@
 
                 <!-- Image/Icon Section -->
                 <div class="flex justify-center items-center mb-4">
-                    <img src="image/s1.png" alt="Legal Advisory Icon" class="object-contain" />
+                    <img src="image/img/s1.webp" alt="Legal Advisory Icon" class="object-contain" />
                 </div>
 
                 <!-- Title -->
@@ -564,7 +574,7 @@
 
     <!-- Why Choose Us -->
 
-    <div class="pb-10 lg:pb-24 bg-[#070708]">
+    <div class="pb-10 lg:pb-24 bg-[#070708] fade-up">
         <div class="text-center px-4 mt-5 lg:mt-0">
             <h2 class="text-xl lg:text-4xl font-bold text-gray-200 font-[Convergence]">Why Choose H&A Enterprises</h2>
             <div class="mt-1 mx-auto h-0.5 w-8 lg:w-18 bg-[#167893] rounded-full"></div>
@@ -594,7 +604,7 @@
             </ul>
             <!-- Image (optional) -->
             <div class="flex justify-center">
-                <img src="image/img_why.png" alt="Why Choose Us" class="w-full mt-10 lg:mt-16 rounded-2xl shadow-xl" />
+                <img src="image/img/img_why.webp" alt="Why Choose Us" class="w-full mt-10 lg:mt-16 rounded-2xl shadow-xl" />
             </div>
 
             <!-- Text Content -->
@@ -643,8 +653,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- Testimonials -->
     <!-- <div class="py-8 bg-[#070708]">
@@ -728,10 +736,9 @@
         </div>
     </div> -->
 
-
     <!-- </div> -->
     <!-- section 4 -->
-    <div class="pb-8 lg:pb-12 mb-10 bg-[#070708]" id="contact">
+    <div class="pb-8 lg:pb-12 mb-10 bg-[#070708] fade-up" id="contact">
         <div class="text-center mb-10 lg:mb-20">
             <h2 class="text-xl lg:text-4xl font-bold text-gray-200 font-[Convergence]">Contact Me</h2>
             <div class="mt-2 mx-auto h-0.5 w-12 bg-[#167893] rounded-full"></div>
@@ -749,7 +756,7 @@
                         <div class="w-full lg:w-1/2">
                             <div class="text-center lg:text-left mt-10">
                                 <div class="mb-6">
-                                    <img src="image/contact1.png" alt="Logo" class="w-full h-full  object-contain">
+                                    <img src="image/img/contact1.webp" alt="Logo" class="w-full h-full  object-contain">
                                 </div>
                                 <div class="flex gap-4">
                                     <h1 class="text-white font-semibold text-lg mb-2">
@@ -854,14 +861,14 @@
     </div>
 
     <!-- footer -->
-    <div class="bg-[#131316] text-white">
+    <div class="bg-[#131316] text-white fade-up">
         <div class="mx-auto px-4 sm:px-6 lg:px-20 py-8 lg:py-16">
             <!-- Grid layout: 1st column spans 2 rows -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
 
                 <!-- Left Logo + Description (spans 2 rows) -->
                 <div class="lg:col-span-2">
-                    <img src="image/hrrr-removebg-preview.png" alt="Logo" class="mb-4 w-20 lg:w-24 object-contain">
+                    <img src="image/img/hrrr-removebg-preview.webp" alt="Logo" class="mb-4 w-20 lg:w-24 object-contain">
                     <p class="text-md text-gray-300 lg:w-[420px] w-full">
                         We empower enterprises with innovative technology solutions, ensuring scalability,
                         security, and efficiency to drive sustainable business growth.
@@ -991,6 +998,14 @@
                 alert("Failed to send message. Please try again.");
             });
     });
+//  smooth transction
+    const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add("visible");
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
 </script>
 
 </html>
