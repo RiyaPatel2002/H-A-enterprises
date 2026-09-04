@@ -200,6 +200,36 @@
       animation: service-label-counter-spin 60s linear infinite;
     }
 
+    /* Keep every label outside its own orbit node while it rotates. */
+    .service-node-label {
+      --label-shift: translateX(-50%);
+      transform: var(--label-shift);
+    }
+
+    .node-two .service-node-label,
+    .node-three .service-node-label {
+      left: calc(100% + 9px);
+      top: 50%;
+      bottom: auto;
+      text-align: left;
+      --label-shift: translateY(-50%);
+    }
+
+    .node-five .service-node-label,
+    .node-six .service-node-label {
+      left: auto;
+      right: calc(100% + 9px);
+      top: 50%;
+      bottom: auto;
+      text-align: right;
+      --label-shift: translateY(-50%);
+    }
+
+    .node-four .service-node-label {
+      top: calc(100% + 9px);
+      bottom: auto;
+    }
+
     .node-one { --node-color: #62d9ef; }
     .node-two { --node-color: #b9a1ff; }
     .node-three { --node-color: #75e6ae; }
@@ -230,7 +260,7 @@
     }
 
     @keyframes service-label-counter-spin {
-      to { transform: translateX(-50%) rotate(-360deg); }
+      to { transform: var(--label-shift) rotate(-360deg); }
     }
 
     @keyframes service-core-pulse {
@@ -243,34 +273,121 @@
       100% { transform: scale(1.25); opacity: 0; }
     }
 
+    /* Mobile service hub - compact, centered, and never clipped */
     @media (max-width: 767px) {
       .service-visual {
-        width: min(100%, 330px);
+        width: min(calc(100vw - 40px), 320px);
+        max-width: 320px;
+        aspect-ratio: 1 / 1;
+        margin-inline: auto;
+        flex: 0 0 auto;
+      }
+
+      .service-orbit-ring {
+        inset: 9%;
+      }
+
+      .service-orbit-ring.ring-two {
+        inset: 21%;
       }
 
       .service-core {
-        width: 112px;
-        height: 112px;
+        width: 98px;
+        height: 98px;
+        gap: 5px;
+        box-shadow: 0 0 0 8px rgba(22, 120, 147, .05), 0 0 38px rgba(22, 120, 147, .26), inset 0 0 20px rgba(53, 197, 231, .16);
+      }
+
+      .service-core::after {
+        inset: -10px;
       }
 
       .service-core svg {
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
+      }
+
+      .service-core span {
+        font-size: 8px;
+        letter-spacing: .15em;
       }
 
       .service-node {
-        width: 52px;
-        height: 52px;
+        width: 44px;
+        height: 44px;
       }
 
       .service-node svg {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
+      }
+
+      .service-node-label {
+        display: none !important;
+      }
+
+      .node-one {
+        top: 2%;
+        left: 50%;
+        margin-left: -22px;
+      }
+
+      .node-two {
+        top: 19%;
+        right: 2%;
+      }
+
+      .node-three {
+        bottom: 19%;
+        right: 2%;
+      }
+
+      .node-four {
+        bottom: 2%;
+        left: 50%;
+        margin-left: -22px;
+      }
+
+      .node-five {
+        bottom: 19%;
+        left: 2%;
+      }
+
+      .node-six {
+        top: 19%;
+        left: 2%;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .service-visual {
+        width: min(calc(100vw - 32px), 286px);
+        max-width: 286px;
+      }
+
+      .service-core {
+        width: 88px;
+        height: 88px;
+      }
+
+      .service-core svg {
+        width: 27px;
+        height: 27px;
+      }
+
+      .service-node {
+        width: 40px;
+        height: 40px;
+      }
+
+      .service-node svg {
+        width: 20px;
+        height: 20px;
       }
 
       .node-one,
       .node-four {
-        margin-left: -26px;
+        margin-left: -20px;
       }
     }
 
@@ -423,12 +540,12 @@
 
   <main class="bg-[#070708] text-gray-100">
     <!-- HERO SECTION -->
-    <section class="max-w-7xl w-full mx-auto relative lg:py-20 py-10 px-6 overflow-hidden">
+    <section class="max-w-7xl w-full mx-auto relative lg:py-20 py-10 px-4 sm:px-6 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-[#0b0b0c] via-[#101112] to-[#0a0a0a] -z-10"></div>
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center lg:mt-20 mt-16 gap-12">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center lg:mt-20 mt-14 sm:mt-16 gap-9 md:gap-12">
 
         <!-- LEFT CONTENT -->
-        <div class="md:w-1/2 space-y-6 animate-fade-up">
+        <div class="w-full md:w-1/2 space-y-6 animate-fade-up">
           <h1 class="text-2xl md:text-4xl font-bold text-center lg:text-left leading-tight text-white">
             Expert <span class="text-[#167893]">Enterprise Solutions</span><br /> for Every Need
           </h1>
@@ -437,13 +554,13 @@
             our services empower your organization to operate smarter, faster, and more securely.
           </p>
           <a href="#services"
-            class="block w-fit mx-auto sm:inline-block sm:mx-0 mt-6 bg-[#167893] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#189fb5] transition-all duration-300">
+            class="block w-fit mx-auto md:mx-0 mt-6 bg-[#167893] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#189fb5] transition-all duration-300">
             Explore Our Services
           </a>
         </div>
 
         <!-- CENTER SERVICE HUB -->
-        <div class="md:w-1/2 flex justify-center animate-fade-up delay-200">
+        <div class="w-full md:w-1/2 flex justify-center mt-2 md:mt-0 animate-fade-up delay-200">
           <div class="service-visual" aria-label="Our six service areas">
             <div class="service-orbit-ring" aria-hidden="true"></div>
             <div class="service-orbit-ring ring-two" aria-hidden="true"></div>
