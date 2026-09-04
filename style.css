@@ -20,6 +20,23 @@ nav a.nav-active {
   color: #63d9ef !important;
 }
 
+/* Shared sticky/glass state for every page navbar */
+nav {
+  transition: background-color .35s ease, backdrop-filter .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+nav.nav-scrolled {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(7, 7, 8, .88) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .24);
+}
+
 /* Reliable full-screen mobile navigation across every page */
 @media (max-width: 1023px) {
   nav {
