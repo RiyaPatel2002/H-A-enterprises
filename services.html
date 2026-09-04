@@ -244,12 +244,42 @@
     .node-five { animation-delay: -3.5s; }
     .node-six { animation-delay: -4.2s; }
 
-    .node-one { top: 2%; left: 50%; margin-left: -32px; }
-    .node-two { top: 19%; right: 2%; }
-    .node-three { bottom: 19%; right: 2%; }
-    .node-four { bottom: 2%; left: 50%; margin-left: -32px; }
-    .node-five { bottom: 19%; left: 2%; }
-    .node-six { top: 19%; left: 2%; }
+    /* Keep each node center on the outer orbit line. */
+    .node-one {
+      top: 8%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .node-two {
+      top: 29%;
+      right: 8%;
+      transform: translate(50%, -50%);
+    }
+
+    .node-three {
+      top: 71%;
+      right: 8%;
+      transform: translate(50%, -50%);
+    }
+
+    .node-four {
+      top: 92%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .node-five {
+      top: 71%;
+      left: 8%;
+      transform: translate(-50%, -50%);
+    }
+
+    .node-six {
+      top: 29%;
+      left: 8%;
+      transform: translate(-50%, -50%);
+    }
 
     @keyframes service-node-orbit {
       to { transform: rotate(360deg); }
@@ -327,35 +357,39 @@
       }
 
       .node-one {
-        top: 2%;
+        top: 9%;
         left: 50%;
-        margin-left: -22px;
+        transform: translate(-50%, -50%);
       }
 
       .node-two {
-        top: 19%;
-        right: 2%;
+        top: 29%;
+        right: 9%;
+        transform: translate(50%, -50%);
       }
 
       .node-three {
-        bottom: 19%;
-        right: 2%;
+        top: 71%;
+        right: 9%;
+        transform: translate(50%, -50%);
       }
 
       .node-four {
-        bottom: 2%;
+        top: 91%;
         left: 50%;
-        margin-left: -22px;
+        transform: translate(-50%, -50%);
       }
 
       .node-five {
-        bottom: 19%;
-        left: 2%;
+        top: 71%;
+        left: 9%;
+        transform: translate(-50%, -50%);
       }
 
       .node-six {
-        top: 19%;
-        left: 2%;
+        top: 29%;
+        left: 9%;
+        transform: translate(-50%, -50%);
       }
     }
 
@@ -385,10 +419,6 @@
         height: 20px;
       }
 
-      .node-one,
-      .node-four {
-        margin-left: -20px;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
