@@ -55,6 +55,295 @@
     .delay-600 {
       transition-delay: .6s;
     }
+
+    /* Circular service hub */
+    .service-visual {
+      position: relative;
+      width: min(100%, 440px);
+      aspect-ratio: 1;
+      margin-inline: auto;
+      display: grid;
+      place-items: center;
+      perspective: 900px;
+    }
+
+    .service-orbit-ring {
+      position: absolute;
+      inset: 8%;
+      border: 1px solid rgba(22, 120, 147, .48);
+      border-radius: 50%;
+      box-shadow: 0 0 45px rgba(22, 120, 147, .14), inset 0 0 32px rgba(22, 120, 147, .08);
+    }
+
+    .service-orbit-ring::before,
+    .service-orbit-ring::after {
+      content: "";
+      position: absolute;
+      inset: 13%;
+      border: 1px dashed rgba(101, 221, 245, .33);
+      border-radius: 50%;
+    }
+
+    .service-orbit-ring::after {
+      inset: 26%;
+      border-style: solid;
+      border-color: rgba(255, 255, 255, .12);
+    }
+
+    .service-orbit-ring.ring-two {
+      inset: 19%;
+      border-style: dashed;
+      border-color: rgba(255, 255, 255, .18);
+    }
+
+    .service-core {
+      position: relative;
+      z-index: 2;
+      width: 142px;
+      height: 142px;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 7px;
+      border: 1px solid rgba(100, 218, 239, .7);
+      border-radius: 50%;
+      color: #9beafa;
+      background: radial-gradient(circle at 35% 25%, rgba(53, 197, 231, .3), rgba(7, 7, 8, .92) 68%);
+      box-shadow: 0 0 0 12px rgba(22, 120, 147, .06), 0 0 55px rgba(22, 120, 147, .35), inset 0 0 25px rgba(53, 197, 231, .2);
+      animation: service-core-pulse 3.5s ease-in-out infinite;
+    }
+
+    .service-core::after {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border: 1px solid rgba(101, 221, 245, .16);
+      border-radius: 50%;
+      animation: service-core-wave 3.5s ease-out infinite;
+    }
+
+    .service-core svg {
+      width: 42px;
+      height: 42px;
+    }
+
+    .service-core span {
+      color: rgba(255, 255, 255, .78);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .service-node {
+      position: absolute;
+      z-index: 3;
+      width: 64px;
+      height: 64px;
+      --node-color: #63d9ef;
+      display: grid;
+      place-items: center;
+      color: var(--node-color);
+      border: 1px solid rgba(101, 221, 245, .48);
+      border-radius: 50%;
+      background: rgba(12, 28, 32, .88);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, .26), 0 0 20px rgba(22, 120, 147, .12);
+      cursor: default;
+      transition: color .3s ease, background-color .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .service-node-orbit {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      transform-origin: center;
+      animation: service-node-orbit 60s linear infinite;
+      pointer-events: none;
+    }
+
+    .service-node-orbit .service-node {
+      pointer-events: auto;
+    }
+
+    .service-node:hover,
+    .service-node:focus-visible {
+      color: #fff;
+      border-color: #63d9ef;
+      background: rgba(22, 120, 147, .82);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, .3), 0 0 30px rgba(53, 197, 231, .34);
+      outline: none;
+    }
+
+    .service-node svg {
+      width: 29px;
+      height: 29px;
+      animation: service-icon-counter-spin 60s linear infinite;
+    }
+
+    .service-node-label {
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 8px);
+      width: max-content;
+      max-width: 125px;
+      color: var(--node-color);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-align: center;
+      white-space: nowrap;
+      transform: translateX(-50%);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .8);
+      animation: service-label-counter-spin 60s linear infinite;
+    }
+
+    .node-one { --node-color: #62d9ef; }
+    .node-two { --node-color: #b9a1ff; }
+    .node-three { --node-color: #75e6ae; }
+    .node-four { --node-color: #ffbd7a; }
+    .node-five { --node-color: #7db7ff; }
+    .node-six { --node-color: #ff88c8; }
+
+    .node-one { animation-delay: -.7s; }
+    .node-two { animation-delay: -1.4s; }
+    .node-three { animation-delay: -2.1s; }
+    .node-four { animation-delay: -2.8s; }
+    .node-five { animation-delay: -3.5s; }
+    .node-six { animation-delay: -4.2s; }
+
+    .node-one { top: 2%; left: 50%; margin-left: -32px; }
+    .node-two { top: 19%; right: 2%; }
+    .node-three { bottom: 19%; right: 2%; }
+    .node-four { bottom: 2%; left: 50%; margin-left: -32px; }
+    .node-five { bottom: 19%; left: 2%; }
+    .node-six { top: 19%; left: 2%; }
+
+    @keyframes service-node-orbit {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes service-icon-counter-spin {
+      to { transform: rotate(-360deg); }
+    }
+
+    @keyframes service-label-counter-spin {
+      to { transform: translateX(-50%) rotate(-360deg); }
+    }
+
+    @keyframes service-core-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.045); }
+    }
+
+    @keyframes service-core-wave {
+      0% { transform: scale(.8); opacity: .7; }
+      100% { transform: scale(1.25); opacity: 0; }
+    }
+
+    @media (max-width: 767px) {
+      .service-visual {
+        width: min(100%, 330px);
+      }
+
+      .service-core {
+        width: 112px;
+        height: 112px;
+      }
+
+      .service-core svg {
+        width: 34px;
+        height: 34px;
+      }
+
+      .service-node {
+        width: 52px;
+        height: 52px;
+      }
+
+      .service-node svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .node-one,
+      .node-four {
+        margin-left: -26px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .service-node-orbit,
+      .service-core,
+      .service-core::after,
+      .service-node {
+        animation: none;
+      }
+
+      .service-node svg {
+        animation: none;
+      }
+
+      .service-node-label {
+        animation: none;
+      }
+    }
+
+    /* Service discovery controls */
+    .service-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 26px auto 6px;
+    }
+
+    .service-filter-btn {
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 999px;
+      padding: 9px 18px;
+      color: rgba(255, 255, 255, .62);
+      font-size: 13px;
+      transition: color .3s ease, background-color .3s ease, border-color .3s ease, transform .3s ease;
+    }
+
+    .service-filter-btn:hover,
+    .service-filter-btn:focus-visible,
+    .service-filter-btn.is-active {
+      border-color: rgba(99, 217, 239, .7);
+      color: #fff;
+      background: rgba(22, 120, 147, .2);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      transition: opacity .35s ease, transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(120deg, transparent 35%, rgba(99, 217, 239, .13), transparent 65%);
+      transform: translateX(-120%);
+      transition: transform .75s ease;
+    }
+
+    .service-card:hover {
+      border-color: rgba(99, 217, 239, .55);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, .28), 0 0 24px rgba(22, 120, 147, .12);
+    }
+
+    .service-card:hover::after {
+      transform: translateX(120%);
+    }
+
+    .service-card.is-filtered-out {
+      display: none;
+    }
   </style>
 </head>
 
@@ -139,12 +428,70 @@
           </a>
         </div>
 
-        <!-- RIGHT IMAGE -->
+        <!-- CENTER SERVICE HUB -->
         <div class="md:w-1/2 flex justify-center animate-fade-up delay-200">
-          <div class="relative w-full max-w-md">
-            <img src="/image/serviceimg.jpg" alt="Service Hero"
-              class="rounded-2xl border border-[#222] shadow-2xl object-cover">
-            <div class="absolute inset-0 bg-[#167893]/20 blur-3xl rounded-2xl -z-10"></div>
+          <div class="service-visual" aria-label="Our six service areas">
+            <div class="service-orbit-ring" aria-hidden="true"></div>
+            <div class="service-orbit-ring ring-two" aria-hidden="true"></div>
+
+            <div class="service-core">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 8.5 12 4l8 4.5-8 4.5-8-4.5Z" />
+                <path d="m4 12 8 4.5 8-4.5M4 15.5l8 4.5 8-4.5" />
+              </svg>
+              <span>Services</span>
+            </div>
+
+            <div class="service-node-orbit">
+              <div class="service-node node-one" role="img" aria-label="GEM Consultant" title="GEM Consultant">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 6h2l2 10h10l2-7H6" /><circle cx="9" cy="20" r="1" /><circle cx="17" cy="20" r="1" />
+              </svg>
+                <span class="service-node-label">GeM</span>
+              </div>
+
+              <div class="service-node node-two" role="img" aria-label="Legal Advisory" title="Legal Advisory">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 4v16M5 7h14M7 7l-3 6a3 3 0 0 0 6 0L7 7ZM17 7l-3 6a3 3 0 0 0 6 0l-3-6ZM8 20h8" />
+              </svg>
+                <span class="service-node-label">Legal Advisory</span>
+              </div>
+
+              <div class="service-node node-three" role="img" aria-label="Secretarial and Compliance" title="Secretarial and Compliance">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3 20 6v5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3Z" /><path d="m8 12 2.5 2.5L16 9" />
+              </svg>
+                <span class="service-node-label">Compliance</span>
+              </div>
+
+              <div class="service-node node-four" role="img" aria-label="Graphic Design" title="Graphic Design">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3a9 9 0 1 0 0 18h1.2a1.8 1.8 0 0 0 1.1-3.2 1.8 1.8 0 0 1 1.1-3.2H18a3 3 0 0 0 3-3 8.9 8.9 0 0 0-9-8.6Z" /><circle cx="7.5" cy="10" r=".8" fill="currentColor" /><circle cx="10" cy="7.2" r=".8" fill="currentColor" /><circle cx="14" cy="7.2" r=".8" fill="currentColor" />
+              </svg>
+                <span class="service-node-label">Graphic Design</span>
+              </div>
+
+              <div class="service-node node-five" role="img" aria-label="Web Development" title="Web Development">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 6l-4 12" />
+              </svg>
+                <span class="service-node-label">Web Development</span>
+              </div>
+
+              <div class="service-node node-six" role="img" aria-label="Social Media Marketing" title="Social Media Marketing">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m4 11 16-6-3 14-5-5-4 4v-6Z" /><path d="m12 14 8-9" />
+              </svg>
+                <span class="service-node-label">Social Media</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -158,6 +505,12 @@
         Each service is crafted to simplify your business journey and ensure your enterprise stays ahead
         of the curve in innovation, security, and performance.
       </p>
+      <div class="service-filter-bar" role="tablist" aria-label="Filter services">
+        <button type="button" class="service-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All Services</button>
+        <button type="button" class="service-filter-btn" data-filter="business" role="tab" aria-selected="false">Business</button>
+        <button type="button" class="service-filter-btn" data-filter="legal" role="tab" aria-selected="false">Legal</button>
+        <button type="button" class="service-filter-btn" data-filter="digital" role="tab" aria-selected="false">Digital</button>
+      </div>
     </section>
 
     <!-- SERVICES GRID -->
@@ -165,7 +518,7 @@
 
       <!-- GEM Consultant -->
       <div id="service1"
-        class="group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up">
+        data-category="business" class="service-card group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up">
         <img src="image/Gem.jpeg" alt="GEM Consultant" class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
         <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#167893] transition">
           GEM Consultant
@@ -178,7 +531,7 @@
 
       <!-- Legal Advisory -->
       <div id="service2"
-        class="group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-100">
+        data-category="legal" class="service-card group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-100">
         <img src="image/Legal Advisory.jpg" alt="Legal Advisory"
           class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
         <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#167893] transition">
@@ -192,7 +545,7 @@
 
       <!-- Secretarial & Compliance -->
       <div id="service3"
-        class="group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-200">
+        data-category="business" class="service-card group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-200">
         <img src="image/Compliance.jpg" alt="Compliance" class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
         <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#167893] transition">
           Secretarial & Compliance
@@ -205,7 +558,7 @@
 
       <!-- Graphic Design -->
       <div id="service4"
-        class="group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-300">
+        data-category="digital" class="service-card group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-300">
         <img src="image/img/s1.webp" alt="Graphic Design" class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
         <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#167893] transition">
           Graphic Design
@@ -218,7 +571,7 @@
 
       <!-- Web Development -->
       <div id="service5"
-        class="group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-400">
+        data-category="digital" class="service-card group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-400">
         <img src="image/img/img1.jpg" alt="Web Development" class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
         <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#167893] transition">
           Web Development
@@ -231,7 +584,7 @@
 
       <!-- Social Media Marketing -->
       <div id="service6"
-        class="group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-500">
+        data-category="digital" class="service-card group border border-[#1f1f1f] bg-[#101112] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-up delay-500">
         <img src="image/s1.png" alt="Social Media Marketing" class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
         <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#167893] transition">
           Social Media Marketing
@@ -362,6 +715,27 @@
     closeBtn.addEventListener("click", () => {
       mobileMenu.classList.remove("translate-x-0");
       mobileMenu.classList.add("translate-x-full");
+    });
+
+    // Filter service cards by category.
+    const serviceFilterButtons = [...document.querySelectorAll(".service-filter-btn")];
+    const serviceCards = [...document.querySelectorAll(".service-card")];
+
+    serviceFilterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        serviceFilterButtons.forEach((item) => {
+          const isActive = item === button;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-selected", String(isActive));
+        });
+
+        serviceCards.forEach((card) => {
+          const shouldShow = filter === "all" || card.dataset.category === filter;
+          card.classList.toggle("is-filtered-out", !shouldShow);
+        });
+      });
     });
 
     // fade-up on scroll
