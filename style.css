@@ -20,6 +20,58 @@ nav a.nav-active {
   color: #63d9ef !important;
 }
 
+/* Reliable full-screen mobile navigation across every page */
+@media (max-width: 1023px) {
+  nav {
+    z-index: 1000 !important;
+  }
+
+  nav #mobile-menu {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    max-width: none !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+    background: #070708 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding-bottom: 32px;
+  }
+
+  nav #mobile-menu.translate-x-full {
+    visibility: hidden;
+    transform: translateX(100%) !important;
+  }
+
+  nav #mobile-menu.translate-x-0 {
+    visibility: visible;
+    transform: translateX(0) !important;
+  }
+
+  nav #mobile-menu > div:first-child {
+    flex: 0 0 auto;
+    min-height: 72px;
+  }
+
+  nav #mobile-menu > div:nth-child(2) {
+    flex: 0 0 auto;
+    margin-top: 36px !important;
+    gap: 22px !important;
+  }
+
+  nav #mobile-menu > div:nth-child(2) a {
+    line-height: 1.2;
+  }
+
+  nav #mobile-menu > div:last-child {
+    flex: 0 0 auto;
+    margin-top: 42px !important;
+  }
+}
+
 @media (min-width: 1024px) {
   nav .hidden.lg\:flex a {
     position: relative;
