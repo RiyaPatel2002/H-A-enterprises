@@ -15,6 +15,39 @@
   /* font-size: 2rem; */
 }
 
+/* Active page state for the shared navigation */
+nav a.nav-active {
+  color: #63d9ef !important;
+}
+
+@media (min-width: 1024px) {
+  nav .hidden.lg\:flex a {
+    position: relative;
+  }
+
+  nav .hidden.lg\:flex a:not(.nav-active)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    border-radius: 999px;
+    background: #63d9ef;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .25s ease;
+  }
+
+  nav .hidden.lg\:flex a:not(.nav-active):hover::after {
+    transform: scaleX(1);
+  }
+
+  nav .hidden.lg\:flex a.nav-active::after {
+    display: none !important;
+  }
+}
+
 @media (max-width: 640px) {
 
   .swiper-button-prev::after,
