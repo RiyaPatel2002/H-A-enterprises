@@ -21,6 +21,15 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .about-feature-icon {
+            transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s ease;
+        }
+
+        .about-feature-card:hover .about-feature-icon {
+            transform: translateY(-4px) rotate(4deg);
+            box-shadow: 0 10px 24px rgba(22, 120, 147, .22);
+        }
     </style>
 </head>
 
@@ -146,8 +155,16 @@
 
         <div class="grid md:grid-cols-3 gap-8 mt-8 fade-up">
             <!-- Service 1 -->
-            <div class="p-6 bg-[#131316] rounded-xl shadow-2xl hover:shadow-lg fade-up">
-                <div class="text-4xl mb-3">💰</div>
+            <div class="about-feature-card p-6 bg-[#131316] rounded-xl shadow-2xl hover:shadow-lg fade-up">
+                <div class="about-feature-icon mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#167893]/15 text-[#55c9e5]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <path d="M3 7.5h18v11H3z" />
+                        <path d="M7 7.5V5.8A1.8 1.8 0 0 1 8.8 4h6.4A1.8 1.8 0 0 1 17 5.8v1.7" />
+                        <path d="M3 11.5h18M10 11.5v2h4v-2" />
+                    </svg>
+                </div>
                 <h3 class="font-bold text-lg text-white">Competitive Tender Pricing</h3>
                 <p class="text-gray-300 text-sm mt-2">
                     We provide accurate cost estimations and competitive bids that maximize winning chances while
@@ -156,8 +173,17 @@
             </div>
 
             <!-- Service 2 -->
-            <div class="p-6 bg-[#1e1e1e] rounded-xl text-white shadow hover:shadow-lg fade-up">
-                <div class="text-black text-4xl mb-3">📊</div>
+            <div class="about-feature-card p-6 bg-[#1e1e1e] rounded-xl text-white shadow hover:shadow-lg fade-up">
+                <div class="about-feature-icon mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#167893]/15 text-[#55c9e5]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <path d="M4 19V5" />
+                        <path d="M4 19h17" />
+                        <path d="m7 15 3-3 2.5 2 5-6 2.5 2" />
+                        <path d="M17.5 8H20v2.5" />
+                    </svg>
+                </div>
                 <h3 class="font-bold text-lg">Financial & Feasibility Analysis</h3>
                 <p class="text-white text-sm mt-2">
                     Detailed ROI studies, project viability assessments, and transparent budgeting for government &
@@ -166,8 +192,16 @@
             </div>
 
             <!-- Service 3 -->
-            <div class="p-6 bg-[#131316] rounded-xl shadow hover:shadow-lg fade-up">
-                <div class="text-orange-500 text-4xl mb-3">👩‍💼</div>
+            <div class="about-feature-card p-6 bg-[#131316] rounded-xl shadow hover:shadow-lg fade-up">
+                <div class="about-feature-icon mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#167893]/15 text-[#55c9e5]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="15" rx="2" />
+                        <path d="M8 5V3h8v2M7 10h10M8 15h2M14 15h2" />
+                        <path d="m17 14 1 1 2-2" />
+                    </svg>
+                </div>
                 <h3 class="font-bold text-lg text-white">Expert Tender Management</h3>
                 <p class="text-gray-300 text-sm mt-2">
                     From documentation to compliance & final submission, our professional team ensures 100% accuracy and
